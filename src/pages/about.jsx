@@ -65,7 +65,6 @@ const About =()=>{
     useEffect(() => {
       if (x === 2500) {
         setX(0);
-        clearInterval(intervalId); 
       }
   
       const intervalId = setInterval(() => {
@@ -77,7 +76,7 @@ const About =()=>{
       return () => clearInterval(intervalId);
     }, [x]);
 return (
-     <section className='space-y-5 pt-40'>
+     <section className='space-y-5 pt-40 overflow-hidden'>
         <div className="title w-11/12 mx-auto mb-10 ">
             <span className="rounded-full p-1 text-sm px-3 bg-black text-white font-semibold">ABOUT US</span>
             <br />

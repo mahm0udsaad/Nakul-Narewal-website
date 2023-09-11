@@ -3,7 +3,7 @@ import {  PageFooter } from "../components/footer";
 const Contact =()=>{
     return (
         <>
-        <section className='services space-y-5 pt-48 lg:pt-32 w-full mx-3'>
+        <section className='overflow-hidden services space-y-5 pt-48 lg:pt-32 w-full mx-3'>
         <div className="flex flex-col justify-center h-[40vh] title mx-auto w-11/12">
              <div className="top text-5xl md:text-6xl lg:text-9xl">
              <span className="rounded-full p-1 text-sm px-3 bg-black text-white font-semibold">CONTACT</span>

@@ -68,7 +68,7 @@ const Works =()=>{
       ];
     return (
       <>
-        <section className="pt-36">
+        <section className="pt-36 overflow-hidden">
             <div className="flex flex-col justify-between h-[40vh] title w-11/12 mx-auto mb-10 border-b-[1px] border-black">
            <div className="top">
            <span className="rounded-full p-1 text-sm px-3 bg-black text-white font-semibold">OUR VISION</span>

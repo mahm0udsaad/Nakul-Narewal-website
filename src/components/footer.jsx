@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faTimes, faChevronRight,faPhone, faEnvelope, faMapMarker } from '@fortawesome/free-solid-svg-icons';
 import { faPinterest, faTwitter, faInstagram } from '@fortawesome/free-brands-svg-icons';
+import { Parallax } from 'react-scroll-parallax';
 
 function ContactInfo(props) {
     return (
@@ -72,13 +73,15 @@ const Footer =()=>{
 const PageFooter = () =>{
     return(
        <>
-       <div className="relative">
-       <img className='absolute top-0 right-0 opacity-1' src="https://www.twosqft.com/wp-content/uploads/2022/04/img-1@2x-11.jpg" alt="" />
-        <div style={{background:'rgb(28 28 28)'}} className="text-white mt-5 p-3 sm:p-10 App">
+       <div className="relative h-[100vh]">
+        <Parallax>
+        <img className='absolute top-0 right-5 opacity-1 w-[40rem] h-[30rem]' src="https://www.twosqft.com/wp-content/uploads/2022/04/img-1@2x-11.jpg" alt="" />
+        </Parallax>
+        <div style={{background:'rgb(28 28 28)'}} className="w-[60%] h-full absolute text-white mt-20 p-3 sm:p-10 App">
            <div className="flex">
             <div className="w-full">
                <div className="title">
-               <h1 className="text-4xl">Have a project in mind? <br /><span className="font-bold">Let’s talk.</span></h1>
+               <h1 className="text-4xl w-1/2">Join us in building greatness together, leveraging our combined vision and expertise.</h1>
                <div className="info flex flex-col items-end pt-10 space-y-3">
                 <h1 className="text-2xl">B-19, Twin Tower,<br />South Gandhi Maidan Patna, 800001</h1>
                 <p className="text-gray-500">EMAIL US DIRECTLY</p>

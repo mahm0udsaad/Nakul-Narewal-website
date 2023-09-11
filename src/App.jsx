@@ -91,7 +91,7 @@ function App() {
     <>
       <div className="App transtion duration-300 ease-out overflow-x-hidden" style={{backgroundColor:bg}} >
        <Navbar hide={hideNav} isCollabOpen={isCollabOpen} setIsCollapOpen={setIsCollapOpen} color={color}/>
-       <div onClick={()=>setIsCollapOpen(false)}>
+       <div className='overflow-hidden' onClick={()=>setIsCollapOpen(false)}>
        <Routes>
           <Route path='*' element={<Home setIsCollapOpen={setIsCollapOpen} hide={hideNav} bg={bg} color={color}/>} />
           <Route path='/about' element={<About />} />
