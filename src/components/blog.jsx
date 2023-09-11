@@ -34,7 +34,7 @@ const Blog = ({ header, type, imageUrl }) => {
           className="w-11/12 h-full object-cover cursor-pointer transtion duration-300 hover:scale-110"
         />
         {/* Read Button */}
-        <button className="absolute bottom-0 right-3 bg-white  py-5 px-6 rounded">
+        <button className="absolute bottom-0 right-0 bg-white  py-5 px-8">
           READ +
         </button>
       </div>

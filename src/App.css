@@ -3,6 +3,12 @@ body{
   overflow: auto;
   scroll-behavior: smooth;
 }
+.image-container::-webkit-scrollbar {
+  display: none;
+}
+button{
+  outline: none;
+}
 .nav-btn{
   border-color: #ffffff36
 }
@@ -39,6 +45,7 @@ nav{
 }
 .image-container {
   transition: transform 1s ease;
+  overflow-x: scroll;
 }
 .wrapper img{
   height: 35rem;
@@ -57,7 +64,8 @@ iframe .ytp-chrome-top{
     width: 100%;
   }
   nav{
-    height: 10rem;
+    height: 7rem;
+    padding-top: 5px;
   }
 }
 .panner{
@@ -81,13 +89,11 @@ iframe .ytp-chrome-top{
   }
 }
 
-@media (max-width: 1200px) {
+@media (max-height: 1000px) {
   .collab{
     background-position: 60% 0%;
   }
-  .leading-10 span{
-    font-size: 4rem;
-  }
+
   footer{
     height: auto;
   }
@@ -101,6 +107,7 @@ iframe .ytp-chrome-top{
   .services{
     padding-top: 7rem !important;
   }
+
   nav .nav-link{
     font-size: 2.2rem;
   }

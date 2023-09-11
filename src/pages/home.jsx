@@ -8,7 +8,7 @@ import { faCogs, faDraftingCompass, faClipboardList, faBuilding } from '@fortawe
 import { Parallax , useParallax ,useParallaxController} from 'react-scroll-parallax'
 import { ContentSquare} from '../components/content';
 
-function Home({color , bg}) {
+function Home({color , bg , setIsCollapOpen}) {
   
   const serviceIcons = [
     {

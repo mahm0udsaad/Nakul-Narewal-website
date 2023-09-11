@@ -40,7 +40,7 @@ function App() {
     }else if (scrollY > 3800) {
       setBg('#072326');
       setColor('white');
-    } else if (scrollY > 1000) {
+    } else if (scrollY > 1300) {
       setBg('white');
       setColor('black');
     } else {
@@ -93,7 +93,7 @@ function App() {
        <Navbar hide={hideNav} isCollabOpen={isCollabOpen} setIsCollapOpen={setIsCollapOpen} color={color}/>
        <div onClick={()=>setIsCollapOpen(false)}>
        <Routes>
-          <Route path='*' element={<Home hide={hideNav} bg={bg} color={color}/>} />
+          <Route path='*' element={<Home setIsCollapOpen={setIsCollapOpen} hide={hideNav} bg={bg} color={color}/>} />
           <Route path='/about' element={<About />} />
           <Route path='/discourses' element={<Discourses />} />
           <Route path='/contact' element={<Contact />} />

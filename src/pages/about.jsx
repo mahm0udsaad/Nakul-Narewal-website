@@ -1,12 +1,22 @@
 import {FullScreenVideo} from '../components/video'
 import '../App.css'
 import { motion } from 'framer-motion';
-import { useEffect, useState } from 'react';
+import { useEffect, useState , useRef} from 'react';
 import { ContentSquare } from '../components/content';
 import { Parallax } from 'react-scroll-parallax';
 import { PageFooter } from '../components/footer';
 
 const imageUrls = [
+    'https://staging.liquid-themes.com/arc-interiordesign2/wp-content/uploads/2022/04/c1.jpg',
+    'https://architecturehub.liquid-themes.com/elementor/wp-content/uploads/2021/08/Placeholder@2x1-1.jpg',
+    'https://staging.liquid-themes.com/arc-interiordesign2/wp-content/uploads/2022/04/c3.jpg',
+    'https://architecturehub.liquid-themes.com/elementor/wp-content/uploads/2021/08/Placeholder-2@2x1-1.jpg',
+    'https://staging.liquid-themes.com/arc-interiordesign2/wp-content/uploads/2022/04/c2.jpg',
+    'https://staging.liquid-themes.com/arc-interiordesign2/wp-content/uploads/2022/04/c1.jpg',
+    'https://architecturehub.liquid-themes.com/elementor/wp-content/uploads/2021/08/Placeholder@2x1-1.jpg',
+    'https://staging.liquid-themes.com/arc-interiordesign2/wp-content/uploads/2022/04/c3.jpg',
+    'https://architecturehub.liquid-themes.com/elementor/wp-content/uploads/2021/08/Placeholder-2@2x1-1.jpg',
+    'https://staging.liquid-themes.com/arc-interiordesign2/wp-content/uploads/2022/04/c2.jpg',
     'https://staging.liquid-themes.com/arc-interiordesign2/wp-content/uploads/2022/04/c1.jpg',
     'https://architecturehub.liquid-themes.com/elementor/wp-content/uploads/2021/08/Placeholder@2x1-1.jpg',
     'https://staging.liquid-themes.com/arc-interiordesign2/wp-content/uploads/2022/04/c3.jpg',
@@ -48,18 +58,24 @@ const imageUrls = [
   };
   
 const About =()=>{
-const [x , setX] = useState(0)
-const [repeat , setRepeat] = useState(false)
-useEffect(()=>{
-    if(x == 2500 ){
-        setX(0)
-    }
-    const intervalId = setInterval(() => {
-          setX((prev => prev - 1 ))
-      }, 30); // Change images every 3 seconds (adjust as needed)
-
+    const [x, setX] = useState(0);
+    const [repeat, setRepeat] = useState(false);
+    const imageContainer = useRef(null);
+  
+    useEffect(() => {
+      if (x === 2500) {
+        setX(0);
+        clearInterval(intervalId); 
+      }
+  
+      const intervalId = setInterval(() => {
+        setX((prevX) => prevX + 1);
+        imageContainer.current.scrollLeft = x; 
+        console.log(x);
+      }, 40);
+  
       return () => clearInterval(intervalId);
-},[x])
+    }, [x]);
 return (
      <section className='space-y-5 pt-40'>
         <div className="title w-11/12 mx-auto mb-10 ">
@@ -103,13 +119,13 @@ return (
              </div>
             </div>
             <div 
-            style={{ transform: `translateX(${x}px)` }}
+            ref={imageContainer}
             className="image-container mt-10 w-full flex space-x-12 overflow-x-hidden">
             {imageUrls.map((url, index) => (
                 <img
                 key={index}
                 src={url}
-                className={index % 2 !== 0 ? 'w-48 sm:w-[20rem]' : 'w-12 sm:w-[20rem] mt-10 sm:h-[20rem]'}
+                className={index % 2 !== 0 ? 'w-60 sm:w-[20rem]' : 'w-40 sm:w-[20rem] mt-10 sm:h-[20rem]'}
                 />
             ))}
             </div>

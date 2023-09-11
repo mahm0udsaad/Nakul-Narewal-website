@@ -243,7 +243,7 @@ const Navbar = ({setIsCollapOpen , isCollabOpen , color , hide}) => {
             </div>
             <div className="text-sm grid grid-cols-2  sm:grid-cols-2 sm:gap-4 h-full pt-16 px-1 sm:p-20 justify-center w-2/1">
 
-            <div className="p- text-white">
+            <div className="text-white">
 
                 <h2 className="font-semibold text-gray-500 pb-5">India</h2>
                 <p>(+91) 8294373340</p>
@@ -271,8 +271,8 @@ const Navbar = ({setIsCollapOpen , isCollabOpen , color , hide}) => {
             </div>
             </div>
             </div>
-            <footer className="md:pt-20 p-4 text-white">
-            <div className="border-t border-gray-400 md:pt-5  lg:my-4"></div>
+            <footer className="md:pt-20 pt-4  text-white">
+            <div className="border-t border-gray-400 pt-5 md:pt-5  lg:my-4"></div>
             <div className="flex justify-between items-center">
             <div className="flex space-x-2 sm:space-x-4">
             <a href="#" className="border rounded-full p-3 sm:p-5 transtion duration-300 hover:bg-white hover:text-black">
@@ -287,7 +287,7 @@ const Navbar = ({setIsCollapOpen , isCollabOpen , color , hide}) => {
             </div>
               
               <div className='pr-8'>
-             • Available for new projects.
+             <span className='text-xl text-green-500 pr-2'>•</span>Available for new projects.
             </div>
         </div>
         </footer>
