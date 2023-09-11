@@ -1,15 +1,20 @@
-import { useState ,useEffect} from 'react'
+import { useState ,useEffect, useRef} from 'react'
 import '../App.css'
 import {Footer} from '../components/footer'
 import TextAnimation from '../components/header'
-import { motion } from 'framer-motion'
+import { motion, useInView } from 'framer-motion'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCogs, faDraftingCompass, faClipboardList, faBuilding } from '@fortawesome/free-solid-svg-icons';
 import { Parallax , useParallax ,useParallaxController} from 'react-scroll-parallax'
 import { ContentSquare} from '../components/content';
 
 function Home({color , bg , setIsCollapOpen}) {
-  
+  const ref = useRef(null)
+  const firstRef = useRef(null)
+  const second = useRef(null)
+  const isSecondView = useInView(second)
+  const isFirstView = useInView(firstRef)
+  const isInView = useInView(ref)
   const serviceIcons = [
     {
       name: 'Site Analysis & Spatial Programming',
@@ -52,8 +57,13 @@ function Home({color , bg , setIsCollapOpen}) {
             <p>With a focus on collaboration, attention to detail, and unwavering commitment to quality, we are dedicated to creating beautiful, functional, and enduring spaces.</p>
           </div>
         </div>
-        <div className="flex flex-col-reverse sm:flex-row mt-10 w-full justify-around">
-          <img className='sm:w-3/5 lg-p-0 md:p-0 p-2 mt-5' src="https://www.twosqft.com/wp-content/uploads/2023/02/MicrosoftTeams-image-9-1536x1229.png" alt="about" />
+        <div 
+          ref={firstRef}
+        className="flex flex-col-reverse sm:flex-row mt-10 w-full justify-around">
+          <motion.img 
+          initial={{ clipPath: 'polygon(0 0, 100% 0, 100% 0%, 0% 0%)' }}
+          animate={{ clipPath:isFirstView?  'polygon(0 0, 100% 0, 100% 100%, 0% 100%)':'polygon(0 0, 100% 0, 100% 0%, 0% 0%)' }}
+          className='sm:w-3/5 lg-p-0 md:p-0 p-2 mt-5' src="https://www.twosqft.com/wp-content/uploads/2023/02/MicrosoftTeams-image-9-1536x1229.png" alt="about" />
            <div className="flex flex-col text-center items-center justify-center">
             <p>OUR PROJECTS</p>
             <i className='text-3xl'>Commercial</i>
@@ -66,7 +76,11 @@ function Home({color , bg , setIsCollapOpen}) {
             <i className='text-3xl'>Residential</i>
             <p className="underline transtion duration-300 hover:text-orange-200">Learn more</p>
            </div>
-           <img className='sm:w-3/5 lg-p-0 md:p-0 p-2 mt-5' src='https://www.twosqft.com/wp-content/uploads/2023/02/MicrosoftTeams-image-3-1536x864.jpg' alt="about" />
+           <motion.img 
+           ref={second}
+          initial={{ clipPath: 'polygon(0 0, 100% 0, 100% 0%, 0% 0%)' }}
+          animate={{ clipPath:isFirstView?  'polygon(0 0, 100% 0, 100% 100%, 0% 100%)':'polygon(0 0, 100% 0, 100% 0%, 0% 0%)' }}
+           className='sm:w-3/5 lg-p-0 md:p-0 p-2 mt-5' src='https://www.twosqft.com/wp-content/uploads/2023/02/MicrosoftTeams-image-3-1536x864.jpg' alt="about" />
         </div>
         </div>
       <div className="sm:flex sm:w-3/5 m-5 pt-8">
@@ -115,17 +129,31 @@ function Home({color , bg , setIsCollapOpen}) {
         </div>
           <div className="w-full border">
             <div className="corsule w-full sm:p-10">
-             <div className="corsule-wrapper p-2 flex w-full">
+             <div 
+             ref={ref}
+             className="corsule-wrapper p-2 flex w-full">
              <motion.div
-             initial={{ clipPath: 'polygon(0 0, 100% 0, 100% 50%, 0% 50%)' }}
-             animate={{ clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0% 100%)' }}
-             transition={{ duration: 1 }} // Adjust the animation duration as needed       
+               initial={{ clipPath: 'polygon(0 0, 0 0, 0 100%, 0% 100%)' }}
+               animate={{
+                 clipPath: isInView
+                   ? 'polygon(0 0, 100% 0, 100% 100%, 0% 100%)'
+                   : 'polygon(0 0, 0 0, 0 100%, 0% 100%)'
+               }}
+               transition={{ duration: 1 }}      
              className="wrapper w-1/2">
               <img src="https://www.twosqft.com/wp-content/uploads/2023/06/2.jpeg" alt="" />
               </motion.div>
-             <div className="wrapper w-1/2">
+             <motion.div 
+              initial={{ clipPath: 'polygon(0 0, 0 0, 0 100%, 0% 100%)' }}
+              animate={{
+                clipPath: isInView
+                  ? 'polygon(0 0, 100% 0, 100% 100%, 0% 100%)'
+                  : 'polygon(0 0, 0 0, 0 100%, 0% 100%)'
+              }}   
+             transition={{ duration: 1 }} // Adjust the animation duration as needed       
+             className="wrapper w-1/2">
              <img src="https://www.twosqft.com/wp-content/uploads/2023/06/r1-1.png" alt="" />
-             </div>
+             </motion.div>
              </div>
               <div className="sm:flex md:flex-col lg:flex-row pt-12 px-5">
                 <div className="flex flex-col  space-y-5 md:w-full md:text-center sm:w-1/2">
@@ -182,7 +210,7 @@ function Home({color , bg , setIsCollapOpen}) {
           </div>
           <div className="sm:flex pt-20">
             <h1 className='text-5xl mx-20 pt-5 sm:mb-0 mb-10 text-ce'>Process</h1>
-            <div className="grid grid-cols-1 lg:grid-cols-4 gap-4">
+            <div  className="grid grid-cols-1 lg:grid-cols-4 gap-4">
             <ContentSquare
                 border='border'
                 center='center'
