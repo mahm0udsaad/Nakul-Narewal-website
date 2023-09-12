@@ -30,10 +30,9 @@ const Contact =()=>{
           <div className="w-[99%] mx-auto h-[70vh] overflow-x-hidden">
           <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d460503.85532457475!2d85.143084!3d25.615336!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ed596bfcf2e633%3A0x2ec2582944990235!2sTwosqft!5e0!3m2!1sen!2sus!4v1693935239174!5m2!1sen!2sus" 
           style={{border:"0"}}
-           allowfullscreen=""
+           allowFullScreen
             loading="lazy"
             className="w-full h-full px-5"
-            referrerpolicy="no-referrer-when-downgrade"
              ></iframe>  
              </div>
           </section>

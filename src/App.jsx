@@ -65,8 +65,8 @@ function App() {
       setBg('white');
       setColor('black');
     }
-    window.scroll(0,0)
 
+    window.scroll(0,0)
   }, [location.pathname]);
 
  useEffect(() => {
@@ -91,12 +91,12 @@ function App() {
 
   return (  
     <>
-       <AnimatePresence mode='wait'>
-      <div key={location.pathname} className="App transtion duration-300 ease-out overflow-x-hidden" style={{backgroundColor:bg}} >
+      <div className="App transtion duration-300 ease-out overflow-x-hidden" style={{backgroundColor:bg}} >
        <Navbar hide={hideNav} isCollabOpen={isCollabOpen} setIsCollapOpen={setIsCollapOpen} color={color}/>
-       <div className='overflow-hidden' onClick={()=>setIsCollapOpen(false)}>
-          <Routes location={location}>
-          <Route index  path='*' element={<Home setIsCollapOpen={setIsCollapOpen} hide={hideNav} bg={bg} color={color}/>} />
+       <div className='overflowy-y-hidden' onClick={()=>setIsCollapOpen(false)}>
+       <AnimatePresence mode='wait'>
+          <Routes location={location} >
+          <Route index  path='/*' element={<Home setIsCollapOpen={setIsCollapOpen} hide={hideNav} bg={bg} color={color}/>} />
           <Route path='/about' element={<About />} />
           <Route path='/discourses' element={<Discourses />} />
           <Route path='/contact' element={<Contact />} />
@@ -104,9 +104,9 @@ function App() {
           <Route path='/works' element={<Works />} />
           <Route path='/works/:id' element={<ProjectDetails />} />
         </Routes>
+        </AnimatePresence>
        </div>
       </div>
-        </AnimatePresence>
     </>
   )
 }
