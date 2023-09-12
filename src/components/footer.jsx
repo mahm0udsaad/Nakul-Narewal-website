@@ -6,7 +6,7 @@ import { Parallax } from 'react-scroll-parallax';
 function ContactInfo(props) {
     return (
       <div className={`info flex flex-col items-end pt-10 space-y-3 ${props.w}`}>
-        <h1 className="text-2xl w-60 text-end">{props.address}</h1>
+        <h1 className="w-1/2 sm:text-2xl w-60 text-end">{props.address}</h1>
         <p className="text-gray-500">EMAIL US DIRECTLY</p>
         <h1 className="text-xl">{props.email}</h1>
         <p className="text-gray-500">CALL US DIRECTLY</p>
@@ -24,7 +24,7 @@ const Footer =()=>{
                <h1 className="text-4xl">Have a project in mind? <br /><span className="font-bold">Let’s talk.</span></h1>
                <div className="flex flex-col">
                <ContactInfo
-                    address="G-36, Outer Circle, G-Block New Delhi, 110001"
+                    address={<>G-36, Outer Circle,<br/> G-Block New Delhi, 110001</>}
                     email="hello@twosqft.com"
                     phone="(+91)8294373340"
                 />
@@ -32,14 +32,14 @@ const Footer =()=>{
                <div className="flex justify-between w-full">
                <ContactInfo
                     w={'w-1/2'}
-                    address="B-19, Twin Tower, South Gandhi Maidan Patna, 800001"
+                    address={<>B-19, Twin Tower,<br /> South Gandhi Maidan <br /> Patna, 800001</>}
                     email="hello@twosqft.com"
                     phone="(+91)8294373340"
                 />
 
                 <ContactInfo
                     w={'w-1/2'}
-                    address="Twosqft, Baani Square, Sector -67 Gurugram, 120045"
+                    address={<>Twosqft, Baani Square,<br /> Sector -67 Gurugram,<br/> 120045</>}
                     email="hello@twosqft.com"
                     phone="(+91)8294373340"
                 />
