@@ -9,7 +9,7 @@ import { Parallax , useParallax ,useParallaxController} from 'react-scroll-paral
 import { ContentSquare} from '../components/content';
 import transition from '../utiles/transition'
 
-function Home({color , bg , setIsCollapOpen}) {
+function Home({colr ,  setIsCollapOpen}) {
   const firstRef = useRef(null)
   const landRef = useRef(null)
   const second = useRef(null)
@@ -45,7 +45,7 @@ function Home({color , bg , setIsCollapOpen}) {
   return (  
     <>
       <div>
-      <section className='main ' style={{backgroundColor:bg}}>
+      <section className='main'>
         <div className="main" onClick={()=>setIsCollapOpen(false)}>
         <TextAnimation />
         </div>
@@ -138,8 +138,8 @@ function Home({color , bg , setIsCollapOpen}) {
       ))}
     </div>
       </section>
-      <section style={{color:color}} className='pt-24 w-[98%] mx-auto text-white'>
-        <div className="border text-white py-3 border-b-0">
+      <section style={{color: `${colr}`}} className='pt-24 w-[98%] mx-auto'>
+        <div className="border py-3 border-b-0">
           <h1 className='text-center'>THROUGH A UNIQUE COMBINATION OF DESIGN AND ENGINEERING.</h1>
         </div>
           <div className="w-full border">
@@ -166,12 +166,12 @@ function Home({color , bg , setIsCollapOpen}) {
                   : 'polygon(0 0, 0 0, 0 100%, 0% 100%)'
               }}   
              transition={{ duration: 1 }} // Adjust the animation duration as needed       
-             className="wrapper w-1/2">
+             className="wrapper w-1/2 text-white">
              <img src="https://www.twosqft.com/wp-content/uploads/2023/06/r1-1.png" alt="" />
              </motion.div>
              </div>
               <div className="sm:flex md:flex-col lg:flex-row pt-12 px-5">
-                <div className="flex flex-col  space-y-5 md:w-full md:text-center sm:w-1/2">
+                <div className="text-white flex flex-col  space-y-5 md:w-full md:text-center sm:w-1/2">
                 <p className="text-2xl">
                     Functional
                   </p>
@@ -203,11 +203,11 @@ function Home({color , bg , setIsCollapOpen}) {
                 </div>            
              </div>
           </div>
-          <div className="land-offer pt-10">
-            <div className="sm:flex-row flex flex-col border border-black">
+          <div className={`land-offer pt-10`}>
+            <div  className="sm:flex-row flex flex-col border border-black">
               <div 
-                  ref={landRef}
-              className="sm:w-2/5">
+                ref={landRef}
+                className={`sm:w-2/5 text-[${colr}]`}>
                 <div className="">
                   <p
                   className="p-3 px-5 ">2.</p>
@@ -234,7 +234,7 @@ function Home({color , bg , setIsCollapOpen}) {
               </div>
             </div>
           </div>
-          <div className="sm:flex pt-20">
+          <div  className="sm:flex pt-20">
             <h1 className='text-5xl mx-20 pt-5 sm:mb-0 mb-10 text-ce lg:bg-inherit md:bg-inherit bg-white relative z-20'>Process</h1>
             <div  className="grid grid-cols-1 lg:grid-cols-4 gap-4">
             <ContentSquare

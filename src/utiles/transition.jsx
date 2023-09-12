@@ -2,9 +2,9 @@ import React from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
 const transition = (OgComp) => {
-  return () => (
+  return (props) => (
     <>
-    <OgComp />
+    <OgComp {...props}/>
     <motion.div
         className="slide-in"
         initial={{ scaleX: 0 }}

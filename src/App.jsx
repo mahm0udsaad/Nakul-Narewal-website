@@ -29,7 +29,6 @@ function App() {
   const [hideNav,setHideNav] = useState('')
   const [color,setColor] = useState(``)
   const location = useLocation()
-  const [isScrolling, setIsScrolling] = useState(false);
   const listenScrollEvent = () => {
     const scrollY = window.scrollY;
     
@@ -42,7 +41,7 @@ function App() {
     }else if (scrollY > 3800) {
       setBg('#072326');
       setColor('white');
-    } else if (scrollY > 1300) {
+    } else if (scrollY > 1400) {
       setBg('white');
       setColor('black');
     } else {
@@ -58,12 +57,6 @@ function App() {
       return () => {
         window.removeEventListener('scroll', listenScrollEvent);
       };
-    }else if (location.pathname === '/descourses'){
-      setBg('gray')
-      setColor('black')
-    }else{
-      setBg('white');
-      setColor('black');
     }
 
     window.scroll(0,0)
@@ -88,18 +81,18 @@ function App() {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
-
+console.log(color);
   return (  
     <>
       <div className="App transtion duration-300 ease-out overflow-x-hidden" style={{backgroundColor:bg}} >
-       <Navbar hide={hideNav} isCollabOpen={isCollabOpen} setIsCollapOpen={setIsCollapOpen} color={color}/>
-       <div className='overflowy-y-hidden' onClick={()=>setIsCollapOpen(false)}>
+       <Navbar hide={hideNav} isCollabOpen={isCollabOpen} setIsCollapOpen={setIsCollapOpen}/>
+       <div className='overflow-hidden' onClick={()=>setIsCollapOpen(false)}>
        <AnimatePresence mode='wait'>
           <Routes location={location} >
-          <Route index  path='/*' element={<Home setIsCollapOpen={setIsCollapOpen} hide={hideNav} bg={bg} color={color}/>} />
+          <Route index  path='/*' element={<Home bg={bg} colr={color} setIsCollapOpen={setIsCollapOpen} />} />
           <Route path='/about' element={<About />} />
           <Route path='/discourses' element={<Discourses />} />
-          <Route path='/contact' element={<Contact />} />
+          <Route path='/contact' element={<Contact colr={color}/>} />
           <Route path='/services' element={<Services />} />
           <Route path='/works' element={<Works />} />
           <Route path='/works/:id' element={<ProjectDetails />} />

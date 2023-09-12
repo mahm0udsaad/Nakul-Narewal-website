@@ -63,7 +63,7 @@ const TextAnimation = () => {
       </div>
       <ParallaxVideo />
     </div>
-      <div className="text-white p-8 w-full flex flex-col-reverse md:space-y-5 lg:flex-row justify-between">
+      <div className="text-white p-8 w-full flex flex-col-reverse md:space-y-5 lg:flex-row justify-between ">
         <div className=" justify-around flex flex-col lg:w-1/2">
           <h2 className="text-3xl font-bold">ABOUT US</h2>
           <i className='text-2xl'>Two Square Feet,
