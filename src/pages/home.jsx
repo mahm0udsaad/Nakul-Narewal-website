@@ -9,11 +9,15 @@ import { Parallax , useParallax ,useParallaxController} from 'react-scroll-paral
 import { ContentSquare} from '../components/content';
 
 function Home({color , bg , setIsCollapOpen}) {
-  const ref = useRef(null)
   const firstRef = useRef(null)
+  const landRef = useRef(null)
   const second = useRef(null)
+  const last = useRef(null)
+  const ref = useRef(null)
   const isSecondView = useInView(second)
   const isFirstView = useInView(firstRef)
+  const isLandViwed = useInView(landRef)
+  const isLastView = useInView(last)
   const isInView = useInView(ref)
   const serviceIcons = [
     {
@@ -63,23 +67,33 @@ function Home({color , bg , setIsCollapOpen}) {
           <motion.img 
           initial={{ clipPath: 'polygon(0 0, 100% 0, 100% 0%, 0% 0%)' }}
           animate={{ clipPath:isFirstView?  'polygon(0 0, 100% 0, 100% 100%, 0% 100%)':'polygon(0 0, 100% 0, 100% 0%, 0% 0%)' }}
+          transition={{duration:1 }}
           className='sm:w-3/5 lg-p-0 md:p-0 p-2 mt-5' src="https://www.twosqft.com/wp-content/uploads/2023/02/MicrosoftTeams-image-9-1536x1229.png" alt="about" />
-           <div className="flex flex-col text-center items-center justify-center">
+           <motion.div
+            initial={{y:50 , opacity: 0}}
+            animate={{y:isFirstView?0 : 50 , opacity:isFirstView? 1:0}}
+            transition={{duration:1.2}}
+            className="flex flex-col text-center items-center justify-center">
             <p>OUR PROJECTS</p>
             <i className='text-3xl'>Commercial</i>
             <p className="underline transtion duration-300 hover:text-orange-200">Learn more</p>
-           </div>
+           </motion.div>
         </div>
         <div className="sm:flex mt-10 w-full justify-around">
-           <div className="flex flex-col text-center items-center justify-center">
+           <motion.div
+            initial={{y:50 , opacity: 0}}
+            animate={{y:isSecondView?0 : 50 , opacity:isSecondView? 1:0}}
+            transition={{duration:1.2}}  
+           ref={second}
+           className="flex flex-col text-center items-center justify-center">
             <p>OUR PROJECTS</p>
             <i className='text-3xl'>Residential</i>
             <p className="underline transtion duration-300 hover:text-orange-200">Learn more</p>
-           </div>
+           </motion.div>
            <motion.img 
-           ref={second}
           initial={{ clipPath: 'polygon(0 0, 100% 0, 100% 0%, 0% 0%)' }}
           animate={{ clipPath:isFirstView?  'polygon(0 0, 100% 0, 100% 100%, 0% 100%)':'polygon(0 0, 100% 0, 100% 0%, 0% 0%)' }}
+           transition={{duration:1}}
            className='sm:w-3/5 lg-p-0 md:p-0 p-2 mt-5' src='https://www.twosqft.com/wp-content/uploads/2023/02/MicrosoftTeams-image-3-1536x864.jpg' alt="about" />
         </div>
         </div>
@@ -190,21 +204,32 @@ function Home({color , bg , setIsCollapOpen}) {
           </div>
           <div className="land-offer pt-10">
             <div className="sm:flex-row flex flex-col border border-black">
-              <div className="sm:w-2/5">
+              <div 
+                  ref={landRef}
+              className="sm:w-2/5">
                 <div className="">
-                  <p className="p-3 px-5 ">2.</p>
+                  <p
+                  className="p-3 px-5 ">2.</p>
                 </div>
-                <div className="p-10 h-[91.5%] space-y-5">
+                <motion.div
+                initial={{x:-50, opacity:0}}
+                animate={{x:isLandViwed ? 0 : -50, opacity:isLandViwed ? 1 : 0}}
+                transition={{duration:1}}
+               className="p-10 h-[91.5%] space-y-5">
                   <h1 className="text-2xl">Do you have</h1>
                   <h1 className="text-2xl font-bold">a piece of Land</h1>
                   <p>Unlock and maximise the value of your property through a collaborative conversion project with our trusted real-estate builder wing, unlocking mutual success and profitability.</p>
                   <div className="flex justify-center">
                     <button className="p-5 rounded w-52 text-white bg-gray-500">Plan Your Project Today</button>
                   </div>
-                </div>
+                </motion.div>
               </div>
               <div className="sm:w-3/5">
-                <img className='p-5 mt-5' src="https://www.twosqft.com/wp-content/uploads/2022/03/img-4.jpg" alt="" />
+                <motion.img 
+                initial={{ clipPath: 'polygon(0 0, 100% 0, 100% 0%, 0% 0%)' }}
+                animate={{ clipPath:isLandViwed?  'polygon(0 0, 100% 0, 100% 100%, 0% 100%)':'polygon(0 0, 100% 0, 100% 0%, 0% 0%)' }}
+                transition={{duration:1 }}
+                className='p-5 mt-5' src="https://www.twosqft.com/wp-content/uploads/2022/03/img-4.jpg" alt="" />
               </div>
             </div>
           </div>
@@ -241,11 +266,21 @@ function Home({color , bg , setIsCollapOpen}) {
             />
              </div>
           </div>
-          <div className= "md:h-2/5 mt-10 sm:flex border border-black w-[98%]">
+          <div 
+          ref={last}
+          className= "md:h-2/5 mt-10 sm:flex border border-black w-[98%]">
             <div className="wrapper p-5 border border-black border-t-0 border-l-0">
-              <img src="https://www.twosqft.com/wp-content/uploads/2022/03/Img.jpg" alt="" />
+              <motion.img 
+               initial={{ clipPath: 'polygon(0 0, 100% 0, 100% 0%, 0% 0%)' }}
+               animate={{ clipPath:isLastView?  'polygon(0 0, 100% 0, 100% 100%, 0% 100%)':'polygon(0 0, 100% 0, 100% 0%, 0% 0%)' }}
+               transition={{duration:1 }}
+              src="https://www.twosqft.com/wp-content/uploads/2022/03/Img.jpg" alt="" />
             </div>
-            <div className='sm:w-2/5'>
+            <motion.div
+            initial={{opacity:0}}
+            animate={{opacity:isLastView ? 1 : 0}}
+            transition={{duration: 1.2}}
+            className='sm:w-2/5'>
               <h1 className='text-center p-5 border border-black border-t-0 border-r-0 border-l-0'>3. COMMERCIAL REAL ESTATE</h1>
               <div className="content py-20 p-8 text-center">
                 <h1 className="text-2xl">Ready to build wealth through</h1>
@@ -255,9 +290,13 @@ function Home({color , bg , setIsCollapOpen}) {
                  <button className='w-40 mx-auto bg-gray-500 p-5 text-white rounded'>learn more</button>
                 </div>
               </div>
-            </div>
+            </motion.div>
             <div className="wrapper p-5 border border-black border-t-0 border-r-0">
-              <img src="https://www.twosqft.com/wp-content/uploads/2022/03/Img-1.jpg" alt="" />
+               <motion.img 
+               initial={{ clipPath: 'polygon(0 0, 100% 0, 100% 0%, 0% 0%)' }}
+               animate={{ clipPath:isLastView?  'polygon(0 0, 100% 0, 100% 100%, 0% 100%)':'polygon(0 0, 100% 0, 100% 0%, 0% 0%)' }}
+               transition={{duration:1 }}
+                src="https://www.twosqft.com/wp-content/uploads/2022/03/Img-1.jpg" alt="" />
             </div>
           </div>
       </section>

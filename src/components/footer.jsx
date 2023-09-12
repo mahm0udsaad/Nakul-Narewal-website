@@ -63,7 +63,7 @@ const Footer =()=>{
             </a>
             </div>
               <div>
-             • Available for new projects.
+              <span className='text-green-500'>•</span> Available for new projects.
             </div>
         </div>
         </footer>
@@ -107,7 +107,7 @@ const PageFooter = () =>{
             </a>
             </div>
               <div>
-             • Available for new projects.
+             <span className='text-green-500'>•</span> Available for new projects.
             </div>
         </div>
         </footer>
