@@ -76,7 +76,7 @@ const About =()=>{
       return () => clearInterval(intervalId);
     }, [x]);
 return (
-     <section className='space-y-5 pt-40 overflow-hidden'>
+     <section className='space-y-5 pt-40 overflow-x-hidden'>
         <div className="title w-11/12 mx-auto mb-10 ">
             <span className="rounded-full p-1 text-sm px-3 bg-black text-white font-semibold">ABOUT US</span>
             <br />
