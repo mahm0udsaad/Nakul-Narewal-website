@@ -234,7 +234,7 @@ function Home({color , bg , setIsCollapOpen}) {
             </div>
           </div>
           <div className="sm:flex pt-20">
-            <h1 className='text-5xl mx-20 pt-5 sm:mb-0 mb-10 text-ce'>Process</h1>
+            <h1 className='text-5xl mx-20 pt-5 sm:mb-0 mb-10 text-ce lg:bg-inherit md:bg-inherit bg-white relative z-20'>Process</h1>
             <div  className="grid grid-cols-1 lg:grid-cols-4 gap-4">
             <ContentSquare
                 border='border'

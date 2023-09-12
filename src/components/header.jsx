@@ -23,10 +23,10 @@ const TextAnimation = () => {
 
   return (
    <section>
-     <div className="flex flex-col">
-      <div  style={{ position: 'relative' }} className='h-[70vh] md:h-[80vh] lg:h-[85vh]'>
-        <Parallax  translateY={["-60%", "80%"]} className="relative pt-5 sm:pt-5 md:pt-12 absolute leading-10 text-center text-5xl md:text-6xl lg:text-8xl text-white font-bold mx-auto lg:w-full">
-            <div className="mx-auto md:w-11/12 lg:w-5/6 z-40 text-center">
+     <div className="flex flex-col overflow-hidden">
+      <div  style={{ position: 'relative' }} className='h-[70vh] md:h-[80vh] lg:h-[100vh]'>
+        <Parallax  translateY={["-60%", "80%"]} className="z-20 relative pt-5 sm:pt-5 md:pt-12 absolute leading-10 text-center text-5xl md:text-7xl lg:text-8xl text-white font-bold mx-auto lg:w-full">
+            <div className="intro mx-auto w-11/12 sm:w-5/6 z-40 text-center">
           <AnimatePresence>
             {isVisible.map((visible, index) => (
               index > 19 && index < 35 ?
