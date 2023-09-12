@@ -65,6 +65,7 @@ function App() {
       setBg('white');
       setColor('black');
     }
+    window.scroll(0,0)
 
   }, [location.pathname]);
 
@@ -85,17 +86,16 @@ function App() {
 
     return () => {
       window.removeEventListener('scroll', handleScroll);
-      window.scroll(0,0)
     };
   }, []);
 
   return (  
     <>
-      <div className="App transtion duration-300 ease-out overflow-x-hidden" style={{backgroundColor:bg}} >
+       <AnimatePresence mode='wait'>
+      <div key={location.pathname} className="App transtion duration-300 ease-out overflow-x-hidden" style={{backgroundColor:bg}} >
        <Navbar hide={hideNav} isCollabOpen={isCollabOpen} setIsCollapOpen={setIsCollapOpen} color={color}/>
        <div className='overflow-hidden' onClick={()=>setIsCollapOpen(false)}>
-       <AnimatePresence mode='wait'>
-          <Routes location={location} key={location.pathname}>
+          <Routes location={location}>
           <Route index  path='*' element={<Home setIsCollapOpen={setIsCollapOpen} hide={hideNav} bg={bg} color={color}/>} />
           <Route path='/about' element={<About />} />
           <Route path='/discourses' element={<Discourses />} />
@@ -104,9 +104,9 @@ function App() {
           <Route path='/works' element={<Works />} />
           <Route path='/works/:id' element={<ProjectDetails />} />
         </Routes>
-        </AnimatePresence>
        </div>
       </div>
+        </AnimatePresence>
     </>
   )
 }
