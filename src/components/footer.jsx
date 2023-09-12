@@ -81,11 +81,11 @@ const PageFooter = () =>{
         <Parallax 
         translateY={['0','70%']}
         speed={2}
-        className='relative w-full flex justify-end'
+        className='hidden  sm:relative w-full sm:flex justify-end'
         >
         <img ref={mage.ref} className='opacity-50 -top-12 right-5 opacity-1 w-[40rem] h-[30rem]' src="https://www.twosqft.com/wp-content/uploads/2022/04/img-1@2x-11.jpg" alt="" />
         </Parallax>
-        <div style={{background:'rgb(28 28 28)'}} className="w-[60%] relative text-white  p-3 sm:p-10 App z-20">
+        <div style={{background:'rgb(28 28 28)'}} className="sm:w-[60%] relative text-white  p-3 sm:p-10 App z-20">
            <div className="flex">
             <div className="w-full">
                <div className="title">
@@ -116,10 +116,10 @@ const PageFooter = () =>{
                </div>
             </div>
            </div>
-           <footer className="sm:p-4 text-white">
+           <footer className="sm:p-4 md:p-0 text-white">
             <div className="border-t border-gray-400 my-4"></div>
             <div className="flex justify-between items-center">
-            <div className="flex sm:pr-0 pr-5 sm:space-x-4">
+            <div className="flex justify-around sm:justify-center sm:pr-0 pr-5 sm:space-x-4">
             <a href="#" className="border rounded-full p-3 sm:p-5 transtion duration-300 hover:bg-white hover:text-black">
                 <FontAwesomeIcon icon={faPinterest} />
             </a>
