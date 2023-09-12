@@ -2,6 +2,7 @@ import IntroWithAccordion from '../components/section';
 import { motion } from 'framer-motion';
 import { useState , useEffect} from 'react';
 import { PageFooter } from '../components/footer';
+import transition from '../utiles/transition';
 
 // sections data
 const introData = [
@@ -168,4 +169,4 @@ function services() {
   );
 }
 
-export default services;
+export default transition(services);

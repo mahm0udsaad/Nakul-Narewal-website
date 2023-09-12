@@ -7,6 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCogs, faDraftingCompass, faClipboardList, faBuilding } from '@fortawesome/free-solid-svg-icons';
 import { Parallax , useParallax ,useParallaxController} from 'react-scroll-parallax'
 import { ContentSquare} from '../components/content';
+import transition from '../utiles/transition'
 
 function Home({color , bg , setIsCollapOpen}) {
   const firstRef = useRef(null)
@@ -306,4 +307,4 @@ function Home({color , bg , setIsCollapOpen}) {
   )
 }
 
-export default Home
+export default transition(Home);

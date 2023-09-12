@@ -5,6 +5,7 @@ import { useEffect, useState , useRef} from 'react';
 import { ContentSquare } from '../components/content';
 import { Parallax } from 'react-scroll-parallax';
 import { PageFooter } from '../components/footer';
+import transition from '../utiles/transition';
 
 const imageUrls = [
     'https://staging.liquid-themes.com/arc-interiordesign2/wp-content/uploads/2022/04/c1.jpg',
@@ -70,8 +71,7 @@ const About =()=>{
       const intervalId = setInterval(() => {
         setX((prevX) => prevX + 1);
         imageContainer.current.scrollLeft = x; 
-        console.log(x);
-      }, 40);
+      }, 20);
   
       return () => clearInterval(intervalId);
     }, [x]);

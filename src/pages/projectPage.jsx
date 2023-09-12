@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { PageFooter } from '../components/footer';
+import transition from '../utiles/transition';
 const ProjectDetails = () => {
     const projects = [
         {
@@ -109,4 +110,4 @@ const ProjectDetails = () => {
   );
 };
 
-export default ProjectDetails;
+export default transition(ProjectDetails);

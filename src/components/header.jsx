@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Parallax } from 'react-scroll-parallax';
 import {ParallaxVideo} from './video';
-
+import { Link } from 'react-router-dom';
 const TextAnimation = () => {
   const text = "We provide seamless design-to-build service to create endearing spaces";
   const [isVisible, setIsVisible] = useState(Array(text.length).fill(false));
@@ -50,11 +50,12 @@ const TextAnimation = () => {
                 </motion.span>
             ))}
           <div className="w-full flex justify-center pt-5 md:pt-8 lg:pt-20">
-            <motion.button
+            <Link
+              to={'/works'}
               className="border nav-btn text-xl text-white rounded-full p-5 w-52  hover:bg-white hover:text-black transition duration-300 flex items-center justify-around"
             >
               Continue
-            </motion.button>
+            </Link>
           </div>
           </AnimatePresence>
             </div>

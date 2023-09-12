@@ -1,4 +1,5 @@
 import {  PageFooter } from "../components/footer";
+import transition from "../utiles/transition";
 
 const Contact =()=>{
     return (
@@ -142,4 +143,4 @@ const Contact =()=>{
 
     )
     }
-    export default Contact ;
+    export default transition(Contact) ;

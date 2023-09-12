@@ -9,6 +9,8 @@ import Discourses from './pages/discourses'
 import Contact from './pages/contact'
 import Services from './pages/services'
 import ProjectDetails from './pages/projectPage'
+import { AnimatePresence } from 'framer-motion'
+
 const ContentSquare = ({ number, title, description }) => {
   return (
     <div className="border border-black p-4 text-center">
@@ -92,8 +94,9 @@ function App() {
       <div className="App transtion duration-300 ease-out overflow-x-hidden" style={{backgroundColor:bg}} >
        <Navbar hide={hideNav} isCollabOpen={isCollabOpen} setIsCollapOpen={setIsCollapOpen} color={color}/>
        <div className='overflow-hidden' onClick={()=>setIsCollapOpen(false)}>
-       <Routes>
-          <Route path='*' element={<Home setIsCollapOpen={setIsCollapOpen} hide={hideNav} bg={bg} color={color}/>} />
+       <AnimatePresence mode='wait'>
+          <Routes location={location} key={location.pathname}>
+          <Route index  path='*' element={<Home setIsCollapOpen={setIsCollapOpen} hide={hideNav} bg={bg} color={color}/>} />
           <Route path='/about' element={<About />} />
           <Route path='/discourses' element={<Discourses />} />
           <Route path='/contact' element={<Contact />} />
@@ -101,6 +104,7 @@ function App() {
           <Route path='/works' element={<Works />} />
           <Route path='/works/:id' element={<ProjectDetails />} />
         </Routes>
+        </AnimatePresence>
        </div>
       </div>
     </>

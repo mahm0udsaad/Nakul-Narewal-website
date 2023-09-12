@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { ProjectCard } from "../components/typography";
 import { Link } from "react-router-dom";
 import { PageFooter } from "../components/footer";
+import transition from "../utiles/transition";
 
 const Works =()=>{
     const projects = [
@@ -89,4 +90,4 @@ const Works =()=>{
       </>
     )
     }
-    export default Works ;
+    export default transition(Works) ;

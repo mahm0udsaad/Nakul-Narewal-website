@@ -1,5 +1,6 @@
 import Blogs from "../components/blog";
 import { Footer, PageFooter } from "../components/footer";
+import transition from "../utiles/transition";
 
 const Discourses =()=>{
     const randomHeader = 'Example Blog Header';
@@ -20,4 +21,4 @@ const Discourses =()=>{
         </>
     )
     }
-    export default Discourses ;
+    export default transition(Discourses) ;

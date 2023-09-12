@@ -82,7 +82,7 @@ const Navbar = ({setIsCollapOpen , isCollabOpen , color , hide}) => {
       </div>
      <nav
       style={{color:color}}
-      className={`${hide ? 'opacity-0':'opacity-1'} font-semibold transtion duration-300 flex sm:flex-row flex-col-reverse sm:px-10  sm:flex text-white justify-between items-center px-5 lg:p-12 fixed top-0 left-0 right-0 z-10`}
+      className={`${hide ? 'opacity-0':'opacity-1'} font-semibold transtion duration-300 flex sm:flex-row flex-col-reverse sm:px-10  sm:flex text-white justify-between items-center px-5 lg:p-12 fixed top-0 left-0 right-0 z-30`}
     >
       <Parallax speed={-5} className={`fixed flex justify-center items-center h-screen top-0 right-0 text-${color}`}>
         <span className='-rotate-90 font-semibold'>scroll</span>
@@ -121,6 +121,7 @@ const Navbar = ({setIsCollapOpen , isCollabOpen , color , hide}) => {
         </motion.button>
 
       </div>
+        <Link to={'/'}>
         <motion.img
           className="h-12 hover:scale-110 transition-transform cursor-pointer"
           src={color === 'black' ? blackLogoSrc : whiteLogoSrc}
@@ -128,12 +129,12 @@ const Navbar = ({setIsCollapOpen , isCollabOpen , color , hide}) => {
           initial="closed"
           animate={isOpen ? 'open' : 'closed'}
         />
+        </Link>
 
     <div className="sm:flex hidden">
-    <motion.button
-      className={`border border-gray-400 border-${color} nav-btn rounded-full p-3 w-40 mr-4 hover:bg-white hover:text-black transition duration-300 flex items-center justify-around`}
-      initial="closed"
-      animate={isOpen ? 'open' : 'closed'}
+    <Link
+    className={`border border-gray-400 border-${color} nav-btn rounded-full p-3 w-40 mr-4 hover:bg-white hover:text-black transition duration-300 flex items-center justify-around`}
+    to={'/contact'}
     >
       contact Us
       <FontAwesomeIcon
@@ -141,7 +142,7 @@ const Navbar = ({setIsCollapOpen , isCollabOpen , color , hide}) => {
         size="1x"
         className="mt-1 transition-transform transform hover:translate-x-[5px]"
       />
-    </motion.button>
+    </Link>
     <motion.button
             onClick={togglecollabsecion}
           className={`border  border-gray-400 border-${color} nav-btn rounded-full w-12 flex flex-col hover:bg-white hover:text-black`}
@@ -219,7 +220,7 @@ const Navbar = ({setIsCollapOpen , isCollabOpen , color , hide}) => {
         <AnimatePresence>
         {isOpen && (
           <motion.div
-            className={`toggled-menu text-black fixed top-0 left-0 w-full h-screen z-20 ${transitionClass}`}
+            className={`z-40 toggled-menu text-black fixed top-0 left-0 w-full h-screen ${transitionClass}`}
             initial={{ translateX: '-100%' ,opacity:0}}
             animate={{ translateX: '0%' ,opacity:1}}
             exit={{ translateX: '-100%' ,opacity:0}}
