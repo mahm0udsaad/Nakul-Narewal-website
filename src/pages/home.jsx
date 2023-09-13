@@ -98,13 +98,13 @@ function Home({colr ,  setIsCollapOpen}) {
            className='sm:w-3/5 lg-p-0 md:p-0 p-2 mt-5' src='https://www.twosqft.com/wp-content/uploads/2023/02/MicrosoftTeams-image-3-1536x864.jpg' alt="about" />
         </div>
         </div>
-      <div className="sm:flex sm:w-3/5 m-5 pt-8">
-        <ul className='w-1/2'>
+       <div className="sm:flex sm:w-11/12 sm:justify-start m-5 pt-8">
+        <ul className='mx-2'>
           <li className='md:text-5xl lg:text-6xl text-3xl'>Creative .</li>
           <li className='md:text-5xl lg:text-6xl text-3xl'>Functional .</li>
           <li className='md:text-5xl lg:text-6xl text-3xl'>Luxurious .</li>
         </ul>
-        <ul className='w-1/2'>
+        <ul className='mx-2'>
           <li className='md:text-5xl lg:text-6xl text-3xl'>Influential .</li>
           <li className='md:text-5xl lg:text-6xl text-3xl'>Landmark .</li>
           <li className='md:text-5xl lg:text-6xl text-3xl'>Expressive .</li>
