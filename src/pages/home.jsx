@@ -76,7 +76,7 @@ function Home({colr ,  setIsCollapOpen}) {
             transition={{duration:1.2}}
             className="flex flex-col text-center items-center justify-center">
             <p>OUR PROJECTS</p>
-            <i className='text-3xl'>Commercial</i>
+            <i className='text-3xl ital'>Commercial</i>
             <p className="underline transtion duration-300 hover:text-orange-200">Learn more</p>
            </motion.div>
         </div>
@@ -88,7 +88,7 @@ function Home({colr ,  setIsCollapOpen}) {
            ref={second}
            className="flex flex-col text-center items-center justify-center">
             <p>OUR PROJECTS</p>
-            <i className='text-3xl'>Residential</i>
+            <i className='text-3xl ital'>Residential</i>
             <p className="underline transtion duration-300 hover:text-orange-200">Learn more</p>
            </motion.div>
            <motion.img 
@@ -172,10 +172,10 @@ function Home({colr ,  setIsCollapOpen}) {
              </div>
               <div className="sm:flex md:flex-col lg:flex-row pt-12 px-5">
                 <div className="text-white flex flex-col  space-y-5 md:w-full text-start sm:w-1/2">
-                <p className="text-2xl">
+                <p className="text-4xl ital">
                     Functional
                   </p>
-                  <h1 className="text-5xl">
+                  <h1 className="text-5xl ">
                   & User-Friendly <br /> Design.
                   </h1>
                   <p className='w-3/5'>Experience the perfect fusion of style and usability with our design approach, creating spaces that are both functional and user-friendly.</p>
@@ -221,7 +221,7 @@ function Home({colr ,  setIsCollapOpen}) {
                 animate={{x:isLandViwed ? 0 : -50, opacity:isLandViwed ? 1 : 0}}
                 transition={{duration:1}}
                className="p-10 h-[91.5%] space-y-5">
-                  <h1 className="text-2xl">Do you have</h1>
+                  <h1 className="text-6xl ital">Do you have</h1>
                   <h1 className="text-2xl font-bold">a piece of Land</h1>
                   <p>Unlock and maximise the value of your property through a collaborative conversion project with our trusted real-estate builder wing, unlocking mutual success and profitability.</p>
                   <div className="flex justify-center">
@@ -288,8 +288,8 @@ function Home({colr ,  setIsCollapOpen}) {
             className='sm:w-2/5'>
               <h1 className='text-center p-5 border border-black border-t-0 border-r-0 border-l-0'>3. COMMERCIAL REAL ESTATE</h1>
               <div className="content py-20 p-8 text-center">
-                <h1 className="text-2xl">Ready to build wealth through</h1>
-                <h1 className="text-xl font-bold">commercial real estate investments?</h1>
+                <h1 className="text-4xl ital">Ready to build wealth through</h1>
+                <h1 className="text-2xl font-bold ital">commercial real estate investments?</h1>
                 <p>Unleash a world of possibilities for your commercial property through a visionary project developed by our design and construction company, tailored to attract and serve diverse businesses in the restaurant, office, hotel, retail, or mall sectors.</p>
                 <div className="flex pt-5 w-full ">
                  <button className='w-40 mx-auto bg-gray-500 p-5 text-white rounded'>learn more</button>
