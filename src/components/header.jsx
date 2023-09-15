@@ -52,7 +52,7 @@ const TextAnimation = () => {
           <div className="w-full flex justify-center pt-5 md:pt-8 lg:pt-20">
             <Link
               to={'/works'}
-              className="border nav-btn text-xl text-white rounded-full p-5 w-52  hover:bg-white hover:text-black transition duration-300 flex items-center justify-around"
+              className="ital border nav-btn text-lg text-white rounded-full p-5 w-52  hover:bg-white hover:text-black transition duration-300 flex items-center justify-around"
             >
               Continue
             </Link>

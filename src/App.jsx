@@ -32,17 +32,25 @@ function App() {
   const listenScrollEvent = () => {
     const scrollY = window.scrollY;
     
-    if(scrollY > 5300){
+    if(scrollY > 5500){
       setBg('#ffff');
       setColor('black');
-    } else if(scrollY > 4800){
+    } else if(scrollY > 5300){
       setBg('#d7dedc');
       setColor('black');
-    }else if (scrollY > 3800) {
+      console.log(scrollY);
+    }else if (scrollY > 4500) {
+      console.log(scrollY);
       setBg('#072326');
       setColor('white');
-    } else if (scrollY > 1400) {
-      setBg('white');
+    } else if (scrollY > 4000 ){
+      setBg('#32484b')
+      setColor('black')
+    }else if (scrollY > 2000){
+      setBg('white')
+      setColor('black')
+    }else if (scrollY > 1700) {
+      setBg('#8e8e8e');
       setColor('black');
     } else {
       setBg('rgb(28 28 28)');

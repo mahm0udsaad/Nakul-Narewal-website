@@ -1,3 +1,4 @@
+
 body{
   position: relative !important;
   overflow: auto;
@@ -5,6 +6,19 @@ body{
 }
 .image-container::-webkit-scrollbar {
   display: none;
+}
+.underline{
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+}
+.ital{
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+}
+.clist{
+  font-family: "Playfair Display", Sans-serif;
+  font-style: italic;
+  line-height: 100px;
 }
 button{
   outline: none;

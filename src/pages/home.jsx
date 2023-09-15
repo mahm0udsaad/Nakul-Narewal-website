@@ -99,15 +99,15 @@ function Home({colr ,  setIsCollapOpen}) {
         </div>
         </div>
        <div className="sm:flex sm:w-11/12 sm:justify-start m-5 pt-8">
-        <ul className='mx-2'>
-          <li className='md:text-5xl lg:text-6xl text-3xl'>Creative .</li>
-          <li className='md:text-5xl lg:text-6xl text-3xl'>Functional .</li>
-          <li className='md:text-5xl lg:text-6xl text-3xl'>Luxurious .</li>
+        <ul className='mx-2 clist'>
+          <li className='md:text-5xl lg:text-6xl text-3xl hover:text-gray-500'>Creative .</li>
+          <li className='md:text-5xl lg:text-6xl text-3xl hover:text-gray-500'>Functional .</li>
+          <li className='md:text-5xl lg:text-6xl text-3xl hover:text-gray-500'>Luxurious .</li>
         </ul>
-        <ul className='mx-2'>
-          <li className='md:text-5xl lg:text-6xl text-3xl'>Influential .</li>
-          <li className='md:text-5xl lg:text-6xl text-3xl'>Landmark .</li>
-          <li className='md:text-5xl lg:text-6xl text-3xl'>Expressive .</li>
+        <ul className='mx-2 clist'>
+          <li className='md:text-5xl lg:text-6xl text-3xl hover:text-gray-500'>Influential .</li>
+          <li className='md:text-5xl lg:text-6xl text-3xl hover:text-gray-500'>Landmark .</li>
+          <li className='md:text-5xl lg:text-6xl text-3xl hover:text-gray-500'>Expressive .</li>
         </ul>
       </div>
       </section>
@@ -128,7 +128,7 @@ function Home({colr ,  setIsCollapOpen}) {
           <div className="text-4xl text-blue-500 mb-4">
             <FontAwesomeIcon icon={service.icon} style={{ color: '#072326' }} />
           </div>
-          <div className="rounded-full text-black shadow-md text-base w-8 h-8 flex items-center justify-center">
+          <div className="rounded-full bg-white text-black shadow-md text-base w-8 h-8 flex items-center justify-center">
             <span>{index + 1}</span>
           </div>
           </div>
@@ -171,18 +171,22 @@ function Home({colr ,  setIsCollapOpen}) {
              </motion.div>
              </div>
               <div className="sm:flex md:flex-col lg:flex-row pt-12 px-5">
-                <div className="text-white flex flex-col  space-y-5 md:w-full md:text-center sm:w-1/2">
+                <div className="text-white flex flex-col  space-y-5 md:w-full text-start sm:w-1/2">
                 <p className="text-2xl">
                     Functional
                   </p>
                   <h1 className="text-5xl">
                   & User-Friendly <br /> Design.
                   </h1>
-                  <p className='md:w-3/5 md:mx-auto'>Experience the perfect fusion of style and usability with our design approach, creating spaces that are both functional and user-friendly.</p>
+                  <p className='w-3/5'>Experience the perfect fusion of style and usability with our design approach, creating spaces that are both functional and user-friendly.</p>
+                  <div className="w-6/5 flex justify-start">
+                <button className="text-start bg-white text-lg text-black p-5">GET Quotation For Your Project</button>
+
+                  </div>
                 </div>
-                 <div className="mx-auto pt-10 sm:flex sm:w-1/2 justify-center">
+                 <div className="mx-auto pt-10 sm:flex sm:w-1/2 justify-around">
                  <div>
-                <ul className='flex flex-col space-y-2 text-xl text-gray-300'>
+                <ul className='flex flex-col space-y-2 text-lg list-disc text-gray-400'>
                   <li>Structural Design</li>
                   <li>Architectural Design</li>
                   <li>City Planning</li>
@@ -191,7 +195,7 @@ function Home({colr ,  setIsCollapOpen}) {
                 </ul>
               </div>
               <div>
-                <ul className='flex flex-col space-y-2 text-xl text-gray-300'>
+                <ul className='flex flex-col space-y-2 text-lg list-disc text-gray-400'>
                   <li>Landscape Architecture</li>
                   <li>Renovation</li>
                   <li>Site Planning</li>
