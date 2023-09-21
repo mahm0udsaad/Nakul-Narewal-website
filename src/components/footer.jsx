@@ -18,38 +18,39 @@ function ContactInfo(props) {
   
 const Footer =()=>{
     return(
-        <div style={{background:'rgb(28 28 28)'}} className="text-white mt-5 p-3 sm:p-10 App">
-           <div className="flex">
+        <div style={{backgroundColor:'rgb(28 28 28)'}} className="text-white mt-5 p-3 sm:p-10 App">
+           <footer className="text-white flex p-8">
             <div className="w-full">
                <div className="title">
-               <h1 className="text-4xl">Have a project in mind? <br /><span className="font-bold">Let’s talk.</span></h1>
-               <div className="flex flex-col">
+               <h1 className="text-5xl"><i className="ital">Have a project in mind?</i> <br /><span className="font-semibold">Let’s talk.</span></h1>
+               <form action="">
+{/* No worries, we don’t spam your inbox. */}
+               <div className="border-b-2 w-[60%] flex items-center justify-between mt-20">
+               <input className='bg-inherit w-full outline-none py-4' type="email" placeholder='Enter your email address'/>
+                <label htmlFor="input">Subscribe</label>
+               </div>
+               </form>
                <ContactInfo
-                    address={<>G-36, Outer Circle,<br/> G-Block New Delhi, 110001</>}
-                    email="hello@twosqft.com"
-                    phone="(+91)8294373340"
-                />
-
-               <div className="flex justify-between w-full">
-               <ContactInfo
-                    w={'w-1/2'}
-                    address={<>B-19, Twin Tower,<br /> South Gandhi Maidan <br /> Patna, 800001</>}
-                    email="hello@twosqft.com"
-                    phone="(+91)8294373340"
-                />
-
-                <ContactInfo
                     w={'w-1/2'}
                     address={<>Twosqft, Baani Square,<br /> Sector -67 Gurugram,<br/> 120045</>}
                     email="hello@twosqft.com"
                     phone="(+91)8294373340"
                 />
                </div>
+             </div>
+               <div className="flex flex-col">
+               <ContactInfo
+                    address={<>G-36, Outer Circle,<br/> G-Block New Delhi, 110001</>}
+                    email="hello@twosqft.com"
+                    phone="(+91)8294373340"
+                />
+               <ContactInfo
+                    address={<>B-19, Twin Tower,<br /> South Gandhi Maidan <br /> Patna, 800001</>}
+                    email="hello@twosqft.com"
+                    phone="(+91)8294373340"
+                />
                </div>
-               </div>
-            </div>
-           </div>
-           <footer className="text-white">
+        </footer>
             <div className="border-t border-gray-400 my-4"></div>
             <div className="flex justify-between items-center">
             <div className="flex sm:pr-0 pr-5 sm:space-x-4">
@@ -66,8 +67,7 @@ const Footer =()=>{
               <div>
               <span className='text-green-500'>•</span> Available for new projects.
             </div>
-        </div>
-        </footer>
+            </div>
         </div>
     )
 }
