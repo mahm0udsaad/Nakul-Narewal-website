@@ -7,7 +7,7 @@ import { motion } from 'framer-motion';
 function ContactInfo(props) {
     return (
       <div className={`info flex flex-col items-end pt-10 space-y-3 ${props.w}`}>
-        <h1 className="w-1/2 sm:text-2xl w-60 text-end">{props.address}</h1>
+        <h1 className="sm:text-2xl text-end">{props.address}</h1>
         <p className="text-gray-500">EMAIL US DIRECTLY</p>
         <h1 className="text-xl">{props.email}</h1>
         <p className="text-gray-500">CALL US DIRECTLY</p>
@@ -21,17 +21,16 @@ const Footer =()=>{
         <div style={{backgroundColor:'rgb(28 28 28)'}} className="text-white mt-5 p-3 sm:p-10 App">
            <footer className="text-white flex p-8">
             <div className="w-full">
-               <div className="title">
+               <div className="title w-[60%]">
                <h1 className="text-5xl"><i className="ital">Have a project in mind?</i> <br /><span className="font-semibold">Let’s talk.</span></h1>
                <form action="">
 {/* No worries, we don’t spam your inbox. */}
-               <div className="border-b-2 w-[60%] flex items-center justify-between mt-20">
+               <div className="border-b-[1px]  flex items-center justify-between mt-20">
                <input className='bg-inherit w-full outline-none py-4' type="email" placeholder='Enter your email address'/>
                 <label htmlFor="input">Subscribe</label>
                </div>
                </form>
                <ContactInfo
-                    w={'w-1/2'}
                     address={<>Twosqft, Baani Square,<br /> Sector -67 Gurugram,<br/> 120045</>}
                     email="hello@twosqft.com"
                     phone="(+91)8294373340"
