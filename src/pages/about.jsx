@@ -154,22 +154,27 @@ return (
              </div>
           </div>
         </div>
-        <div className="w-full hidden sm:flex justify-between">
-            <div className="w-1/2  relative">
+        <div className="w-full hidden sm:flex justify-between py-24 overflow-hidden">
+            <div className="w-1/2 relative">
                 <Parallax
-                translateY={['0%', '10%']}
+                translateY={['-20%', '20%']}
+                speed={-5}
+                className='absolute w-60 left-[32%] top-20 z-20'
                 >
-                    <img className='absolute h-80 left-[30%] top-20 z-0 ' src="https://www.twosqft.com/wp-content/uploads/2023/06/ab2.jpg" alt="" />
+                    <img className=' h-full' src="https://www.twosqft.com/wp-content/uploads/2023/06/ab2.jpg" alt="" />
                 </Parallax>
                 <Parallax
-                translateY={['0%', '10%']}
+                translateY={['-30%', '50%']}
+                className='absolute w-56 h-80 right-5'
                 >
-                    <img className='absolute w-56 h-80 right-5' src="https://www.twosqft.com/wp-content/uploads/2023/06/ab3.jpg" alt="" />
+                    <img className='h-full' src="https://www.twosqft.com/wp-content/uploads/2023/06/ab3.jpg" alt="" />
                 </Parallax>
                 <Parallax
-                translateY={['0%', '10%']}
+                translateY={['30%', '-30%']}
+                speed={-8}
+                className='absolute w-60 h-80'
                 >
-                    <img className='absolute w-60 ' src="https://www.twosqft.com/wp-content/uploads/2023/06/about1.jpg" alt="" />
+                    <img className='h-full' src="https://www.twosqft.com/wp-content/uploads/2023/06/about1.jpg" alt="" />
                 </Parallax>
             </div>
             <div className="w-2/5 p-5">
