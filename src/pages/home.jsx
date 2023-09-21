@@ -51,46 +51,50 @@ function Home({colr ,  setIsCollapOpen}) {
         </div>
       </section>
       <section >
-        <div className="w-full  mx-auto">
-        <div className="sm:flex w-11/12 text-black sm:mx-auto p-5 justify-between">
+        <div className="w-11/12 mx-auto">
+        <div className="mt-12 sm:flex  text-black sm:mx-auto justify-between">
           <div className="lab sm:w-1/2 text-4xl">
-            <p className='text-xl'>OUR PROJECTS</p>
-            <i>design , construct , transcend-</i><br />
-            <h2 className="text-4xl font-bold">beyond square footage</h2>
+            <p className='text-sm font-semibold text-gray-700 pb-8'>OUR PROJECTS</p>
+            <i className='ital text-4xl'>design , construct , transcend-</i><br />
+            <h2 className="text-4xl font-semibold">beyond square footage</h2>
           </div>
-          <div className="lab pt-5 sm:w-1/2">
+          <div className="lab pt-5 sm:w-1/2 flex items-center">
             <p>With a focus on collaboration, attention to detail, and unwavering commitment to quality, we are dedicated to creating beautiful, functional, and enduring spaces.</p>
           </div>
         </div>
         <div 
           ref={firstRef}
-        className="flex flex-col-reverse sm:flex-row mt-10 w-full justify-around">
+        className="flex flex-col-reverse sm:flex-row mt-10 w-full justify-between">
           <motion.img 
           initial={{ clipPath: 'polygon(0 0, 100% 0, 100% 0%, 0% 0%)' }}
           animate={{ clipPath:isFirstView?  'polygon(0 0, 100% 0, 100% 100%, 0% 100%)':'polygon(0 0, 100% 0, 100% 0%, 0% 0%)' }}
           transition={{duration:1 }}
-          className='sm:w-3/5 lg-p-0 md:p-0 p-2 mt-5' src="https://www.twosqft.com/wp-content/uploads/2023/02/MicrosoftTeams-image-9-1536x1229.png" alt="about" />
+          className='sm:w-[64%] lg-p-0 md:p-0 p-2 mt-5' src="https://www.twosqft.com/wp-content/uploads/2023/02/MicrosoftTeams-image-9-1536x1229.png" alt="about" />
+                 <div className="flex justify-center items-center w-full">
+                <motion.div
+                  initial={{y:50 , opacity: 0}}
+                  animate={{y:isSecondView?0 : 50 , opacity:isSecondView? 1:0}}
+                  transition={{duration:1.2}}  
+                ref={second}
+                className="flex flex-col text-center items-center justify-center">
+                  <p className='pb-4'>OUR PROJECTS</p>
+                  <i className='text-5xl ital '>Residential</i>
+                  <p className="underline transtion duration-300 hover:text-orange-200">Learn more</p>
+                </motion.div>
+               </div>
+        </div>
+        <div className="sm:flex mt-10 w-full justify-between">
+           <div className="flex justify-center items-center w-full">
            <motion.div
             initial={{y:50 , opacity: 0}}
             animate={{y:isFirstView?0 : 50 , opacity:isFirstView? 1:0}}
             transition={{duration:1.2}}
             className="flex flex-col text-center items-center justify-center">
-            <p>OUR PROJECTS</p>
-            <i className='text-3xl ital'>Commercial</i>
+            <p className='pb-4'>OUR PROJECTS</p>
+            <i className='text-4xl ital'>Commercial</i>
             <p className="underline transtion duration-300 hover:text-orange-200">Learn more</p>
            </motion.div>
-        </div>
-        <div className="sm:flex mt-10 w-full justify-around">
-           <motion.div
-            initial={{y:50 , opacity: 0}}
-            animate={{y:isSecondView?0 : 50 , opacity:isSecondView? 1:0}}
-            transition={{duration:1.2}}  
-           ref={second}
-           className="flex flex-col text-center items-center justify-center">
-            <p>OUR PROJECTS</p>
-            <i className='text-3xl ital'>Residential</i>
-            <p className="underline transtion duration-300 hover:text-orange-200">Learn more</p>
-           </motion.div>
+           </div>
            <motion.img 
           initial={{ clipPath: 'polygon(0 0, 100% 0, 100% 0%, 0% 0%)' }}
           animate={{ clipPath:isFirstView?  'polygon(0 0, 100% 0, 100% 100%, 0% 100%)':'polygon(0 0, 100% 0, 100% 0%, 0% 0%)' }}
@@ -98,24 +102,24 @@ function Home({colr ,  setIsCollapOpen}) {
            className='sm:w-3/5 lg-p-0 md:p-0 p-2 mt-5' src='https://www.twosqft.com/wp-content/uploads/2023/02/MicrosoftTeams-image-3-1536x864.jpg' alt="about" />
         </div>
         </div>
-       <div className="sm:flex sm:w-11/12 sm:justify-start m-5 pt-8">
+       <div className="sm:flex sm:w-11/12 mx-auto sm:justify-start m-5 pt-8">
         <ul className='mx-2 clist'>
-          <li className='md:text-5xl lg:text-6xl text-3xl hover:text-gray-500'>Creative .</li>
-          <li className='md:text-5xl lg:text-6xl text-3xl hover:text-gray-500'>Functional .</li>
-          <li className='md:text-5xl lg:text-6xl text-3xl hover:text-gray-500'>Luxurious .</li>
+          <li className='md:text-5xl lg:text-8xl text-3xl hover:text-gray-500'>Creative .</li>
+          <li className='md:text-5xl lg:text-8xl text-3xl hover:text-gray-500'>Functional .</li>
+          <li className='md:text-5xl lg:text-8xl text-3xl hover:text-gray-500'>Luxurious .</li>
         </ul>
         <ul className='mx-2 clist'>
-          <li className='md:text-5xl lg:text-6xl text-3xl hover:text-gray-500'>Influential .</li>
-          <li className='md:text-5xl lg:text-6xl text-3xl hover:text-gray-500'>Landmark .</li>
-          <li className='md:text-5xl lg:text-6xl text-3xl hover:text-gray-500'>Expressive .</li>
+          <li className='md:text-5xl lg:text-8xl text-3xl hover:text-gray-500'>Influential .</li>
+          <li className='md:text-5xl lg:text-8xl text-3xl hover:text-gray-500'>Landmark .</li>
+          <li className='md:text-5xl lg:text-8xl text-3xl hover:text-gray-500'>Expressive .</li>
         </ul>
       </div>
       </section>
-      <section>
-      <div className="text-black p-8 w-full sm:flex space-x-5 space-y-5  justify-between">
-        <div className="md:w-1/2 space-y-5 md:ml-8 justify-around flex flex-col">
+      <section className='w-11/12 mx-auto'>
+      <div className="pt-20 text-black p-8 w-full sm:flex space-x-5 space-y-5  justify-between">
+        <div className="md:w-1/2 space-y-5 justify-around flex flex-col">
           <p>MEET TWOSWFT</p>
-          <i className='text-4xl font-semibold'>Creative,and proficient.</i>
+          <i className='text-5xl font-semibold'><i className="ital">Creative</i> <br /> and proficient.</i>
         </div>
           <p className="mb-4 sm:w-6/12 text-lg">
           Twosqft employs over 100 employees, the majority of whom are based on project sites. We embrace holistic development and support for employees with the aim of being a first-choice.
@@ -123,7 +127,7 @@ function Home({colr ,  setIsCollapOpen}) {
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 text-black">
       {serviceIcons.map((service, index) => (
-        <div key={service.name} className="p-4 text-cente border-r">
+        <div key={service.name} className={`p-4 text-cente ${index < 3 ? 'border-r': ''}`}>
           <div className="flex justify-around">
           <div className="text-4xl text-blue-500 mb-4">
             <FontAwesomeIcon icon={service.icon} style={{ color: '#072326' }} />
@@ -207,25 +211,25 @@ function Home({colr ,  setIsCollapOpen}) {
                 </div>            
              </div>
           </div>
-          <div className={`land-offer pt-10`}>
+          <div className={`land-offer pt-10 w-11/12 mx-auto`}>
             <div  className="sm:flex-row flex flex-col border border-black">
               <div 
                 ref={landRef}
                 className={`sm:w-2/5 text-[${colr}]`}>
                 <div className="">
                   <p
-                  className="p-3 px-5 ">2.</p>
+                  className="p-3 px-5 border border-black border-t-0 border-l-0">2.</p>
                 </div>
                 <motion.div
                 initial={{x:-50, opacity:0}}
                 animate={{x:isLandViwed ? 0 : -50, opacity:isLandViwed ? 1 : 0}}
                 transition={{duration:1}}
-               className="p-10 h-[91.5%] space-y-5">
+               className="p-10 h-[91.5%] space-y-5 border-r-[1px] border-black">
                   <h1 className="text-6xl ital">Do you have</h1>
                   <h1 className="text-2xl font-bold">a piece of Land</h1>
                   <p>Unlock and maximise the value of your property through a collaborative conversion project with our trusted real-estate builder wing, unlocking mutual success and profitability.</p>
                   <div className="flex justify-center">
-                    <button className="p-5 rounded w-52 text-white bg-gray-500">Plan Your Project Today</button>
+                    <button className="p-5 rounded w-60 text-white bg-gray-500">Plan Your Project Today</button>
                   </div>
                 </motion.div>
               </div>

@@ -8,7 +8,7 @@ const ParallaxVideo = () => {
       <Parallax
         className="relative pt-48"
         style={{ paddingBottom: '50%', height: 0}}
-        scale={[0.75, 1]}
+        scale={[0.75, 1.2]}
         >
         <iframe
           src="https://www.youtube.com/embed/ymJA4Ak61oc?autoplay=true&mute=1&controls=0&rel=0&playsinline=1&enablejsapi=1&origin=https%3A%2F%2Fwww.twosqft.com&widgetid=1"
