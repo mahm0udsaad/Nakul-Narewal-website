@@ -69,6 +69,9 @@ const Footer =()=>{
         </footer>
             <div className="border-t border-gray-400 my-4"></div>
             <div className="flex justify-between items-center">
+            <div>
+            2023 Twosqft. All rights are reserved.
+            </div>
             <div className="flex sm:pr-0 pr-5 sm:space-x-4">
             <a href="#" className="border rounded-full p-5 transtion duration-300 hover:bg-white hover:text-black">
                 <FontAwesomeIcon icon={faPinterest} />
@@ -79,9 +82,6 @@ const Footer =()=>{
             <a href="#" className="border rounded-full p-5 transtion duration-300 hover:bg-white hover:text-black">
                 <FontAwesomeIcon icon={faInstagram} />
             </a>
-            </div>
-              <div>
-              <span className='text-green-500'>•</span> Available for new projects.
             </div>
             </div>
         </div>

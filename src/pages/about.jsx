@@ -48,7 +48,7 @@ const imageUrls = [
   ];
   const Card = ({ data }) => {
     return (
-      <div className="p-4 sm:w-[35%]">
+      <div className="p-4 w-[30%] lg:w-[35%]">
         <img src={data.imageUrl} alt="Project" className="w-full" />
         <div className="text-center mt-4">
           <p className="text-7xl my-10 font-bold">{data.percentage}</p>
@@ -80,21 +80,22 @@ return (
         <div className="title w-11/12 mx-auto mb-10 ">
             <span className="rounded-full p-1 text-sm px-3 bg-black text-white font-semibold">ABOUT US</span>
             <br />
-            <i className="text-4xl bold">Design, Construct, Transcend</i>
+            <i className="text-4xl font-semibold ital ">Design, Construct, Transcend</i>
             <h1 className="text-4xl bold">beyond square footage</h1>
         </div>
         <FullScreenVideo />
-        <div className="w-[98%] mx-auto">
-            <div className="w-full flex justify-between border-b-[1px] border-black">
+        <div className="w-11/12 lg:w-[85%] mx-auto">
+            <div className="w-full pt-8 flex justify-between border-b-[1px] border-black">
                 <p>ABOUt US</p>
                 <p>01</p>
             </div>
-             <div className="w-full my-5">
+           
+            <div className=" lg:flex justify-between pt-28 pb-20">
+             <div className="first lg:w-[40%]">
+             <div className="w-full ">
              <span className="mt-5 rounded-full p-1 text-sm px-3 bg-black text-white font-semibold"> WHAT DO WE OFFER ?</span>
              </div>
-            <div className="w-full sm:flex justify-between mt-10">
-             <div className="first font-semibold sm:w-[33%]">
-            <h1 className="text-2xl sm:text-4xl pb-5">We offer comprehensive design and build solutions, providing end-to-end services for all your project needs.</h1>
+            <h1 className="text-xl sm:text-4xl pb-5 pt-4">We offer comprehensive design and build solutions, providing end-to-end services for all your project needs.</h1>
              <ul className="flex space-x-2">
                 <li>★</li>
                 <li>★</li>
@@ -103,8 +104,9 @@ return (
                 <li>★</li>
              </ul>
              </div>
-             <div className="midd text-xl my-5 sm:text-3xl font-semibold">
-                <ul>
+             <div className="flex justify-around w-full lg:w-[60%]">
+             <div className="midd text-xl md:w-1/2 my-5 sm:text-xl font-semibold">
+                <ul className='leading-9 lg:pl-8'>
                     <li>Architectural Design</li>
                     <li>MEP Design</li>
                     <li>Interior Design</li>
@@ -113,8 +115,9 @@ return (
                     <li></li>
                 </ul>
              </div>
-             <div className="last sm:w-[30%]">
+             <div className="last md:w-1/2 lg:w-[30%]">
                 <p>Experience the ultimate convenience and expertise with our full-service design and build company. Our dedicated team takes charge of every aspect of your project, ensuring a seamless journey from start to finish. From the initial conceptualization to the final completion, we handle it all, allowing you to embrace a stress-free experience. With our meticulous oversight, your vision transforms into reality, delivering exceptional results at every step.</p>
+             </div>
              </div>
             </div>
             <div 
@@ -154,8 +157,8 @@ return (
              </div>
           </div>
         </div>
-        <div className="w-full hidden sm:flex justify-between py-24 overflow-hidden">
-            <div className="w-1/2 relative">
+        <div className="w-full lg:w-5/6 mx-auto hidden sm:flex justify-between py-24 overflow-hidden">
+            <div className="w-[60%] lg:w-[40%] relative">
                 <Parallax
                 translateY={['-20%', '20%']}
                 speed={-5}

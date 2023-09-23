@@ -9,12 +9,12 @@ const ContentSquare = ({ number, title, description ,border , center}) => {
       animate={{y:isInView?-50 :0 , opacity:isInView? 1 :0}}
       transition={{duration:.5}}
       ref={ref}
-      className={`${border} border-black p-4 text-${center}`}>
+      className={`${border} text-start border-black p-4 text-${center}`}>
         <div className="flex items-center space-x-2">
         <div className="text-4xl font-bold">{number}</div>
         <div className="text-xl font-bold">/{title}</div>
         </div>
-        <p className='pt-5'>{description}</p>
+        <p className='pt-5 text-sm'>{description}</p>
       </motion.div>
     );
   };

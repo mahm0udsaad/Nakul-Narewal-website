@@ -144,14 +144,14 @@ function Home({colr ,  setIsCollapOpen}) {
          </AnimatePresence>
         </motion.div>}
         <ul className='mx-2 clist'>
-          <li onMouseMove={()=> setCurrentImage(1)} className='md:text-5xl lg:text-8xl text-3xl hover:text-gray-700 hover:z-50'>Creative .</li>
-          <li onMouseMove={()=> setCurrentImage(2)} className='md:text-5xl lg:text-8xl text-3xl hover:text-gray-700 hover:z-50'>Functional .</li>
-          <li onMouseMove={()=> setCurrentImage(5)} className='md:text-5xl lg:text-8xl text-3xl hover:text-gray-700 hover:z-50'>Luxurious .</li>
+          <li onMouseMove={()=> setCurrentImage(1)} className='md:text-5xl lg:text-8xl text-3xl hover:text-white hover:z-50'>Creative .</li>
+          <li onMouseMove={()=> setCurrentImage(2)} className='md:text-5xl lg:text-8xl text-3xl hover:text-white hover:z-50'>Functional .</li>
+          <li onMouseMove={()=> setCurrentImage(5)} className='md:text-5xl lg:text-8xl text-3xl hover:text-white hover:z-50'>Luxurious .</li>
         </ul>
         <ul className='mx-2 clist'>
-          <li onMouseMove={()=> setCurrentImage(4)} className='md:text-5xl lg:text-8xl text-3xl hover:text-gray-700 hover:z-50'>Influential .</li>
-          <li onMouseMove={()=> setCurrentImage(3)} className='md:text-5xl lg:text-8xl text-3xl hover:text-gray-700 hover:z-50'>Landmark .</li>
-          <li onMouseMove={()=> setCurrentImage(0)} className='md:text-5xl lg:text-8xl text-3xl hover:text-gray-700 hover:z-50'>Expressive .</li>
+          <li onMouseMove={()=> setCurrentImage(4)} className='md:text-5xl lg:text-8xl text-3xl hover:text-white hover:z-50'>Influential .</li>
+          <li onMouseMove={()=> setCurrentImage(3)} className='md:text-5xl lg:text-8xl text-3xl hover:text-white hover:z-50'>Landmark .</li>
+          <li onMouseMove={()=> setCurrentImage(0)} className='md:text-5xl lg:text-8xl text-3xl hover:text-white hover:z-50'>Expressive .</li>
         </ul>
       </div>
       </section>
@@ -159,7 +159,7 @@ function Home({colr ,  setIsCollapOpen}) {
       <div className="pt-20 text-black p-8 w-full sm:flex space-x-5 space-y-5  justify-between">
         <div className="md:w-1/2 space-y-5 justify-around flex flex-col">
           <p>MEET TWOSWFT</p>
-          <i className='text-5xl font-semibold'><i className="ital">Creative</i> <br /> and proficient.</i>
+          <h1 className='text-5xl font-semibold'><i className="ital">Creative</i> <br /> and proficient.</h1>
         </div>
           <p className="mb-4 sm:w-6/12 text-lg">
           Twosqft employs over 100 employees, the majority of whom are based on project sites. We embrace holistic development and support for employees with the aim of being a first-choice.
@@ -251,7 +251,8 @@ function Home({colr ,  setIsCollapOpen}) {
                 </div>            
              </div>
           </div>
-          <div className={`land-offer pt-10 w-4/5 mx-auto`}>
+         <section className='md:w-[85%] mx-auto'>
+         <div className={`land-offer pt-10`}>
             <div  className="sm:flex-row flex flex-col border border-black">
               <div 
                 ref={landRef}
@@ -282,9 +283,9 @@ function Home({colr ,  setIsCollapOpen}) {
               </div>
             </div>
           </div>
-          <div  className="sm:flex pt-20">
-            <h1 className='text-5xl mx-20 pt-5 sm:mb-0 mb-10 text-ce lg:bg-inherit md:bg-inherit bg-white relative z-20'>Process</h1>
-            <div  className="grid grid-cols-1 lg:grid-cols-4 gap-4">
+          <div  className="sm:flex justify-between pt-20">
+            <h1 className='text-5xl pt-5 pr-4 sm:mb-0 mb-10 text-ce lg:bg-inherit md:bg-inherit bg-white relative z-20'>Process</h1>
+            <div  className="grid grid-cols-1 lg:grid-cols-4 gap-2 w-5/6 ">
             <ContentSquare
                 border='border'
                 center='center'
@@ -317,7 +318,7 @@ function Home({colr ,  setIsCollapOpen}) {
           </div>
           <div 
           ref={last}
-          className= "lg:h-[40rem] mt-10 lg:flex justify-center border border-black w-11/12  mx-auto">
+          className= "lg:h-[40rem] mt-10 lg:flex justify-center border border-black">
             <div className="p-5 flex justify-center border border-black border-t-0 border-l-0">
               <motion.img 
                initial={{ clipPath: 'polygon(0 0, 100% 0, 100% 0%, 0% 0%)' }}
@@ -332,7 +333,7 @@ function Home({colr ,  setIsCollapOpen}) {
             transition={{duration: 1.2}}
             className='lg:w-1/2'>
               <h1 className='text-center p-5 border border-black border-t-0 border-r-0 border-l-0'>3. COMMERCIAL REAL ESTATE</h1>
-              <div className="content py-20 p-8 text-center">
+              <div className="content py-28 p-8 text-center">
                 <h1 className="text-4xl ital">Ready to build wealth through</h1>
                 <h1 className="text-2xl font-bold ital">commercial real estate investments?</h1>
                 <p>Unleash a world of possibilities for your commercial property through a visionary project developed by our design and construction company, tailored to attract and serve diverse businesses in the restaurant, office, hotel, retail, or mall sectors.</p>
@@ -350,6 +351,7 @@ function Home({colr ,  setIsCollapOpen}) {
                 src="https://www.twosqft.com/wp-content/uploads/2022/03/Img-1.jpg" alt="" />
             </div>
           </div>
+         </section>
       </section>
       <Footer />
       </div>

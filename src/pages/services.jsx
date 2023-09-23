@@ -92,18 +92,18 @@ function services() {
   return (
    <>
       <div>
-      <section className='services space-y-5 pt-28 lg:pt-28 w-11/12 mx-auto'>
-      <div className="flex flex-col justify-between h-[40vh] title w-11/12 mx-auto mb-10 border-b-[1px] border-black">
+      <section className='services space-y-5 pt-28 lg:pt-28 w-11/12 lg:w-5/6 mx-auto'>
+      <div className="flex flex-col justify-between h-[40vh] title mb-10 border-b-[1px] border-black">
            <div className="top">
            <span className="rounded-full p-1 text-sm px-3 bg-black text-white font-semibold">OUR SERVICES</span>
             <br />
-            <i className="text-5xl font-semibold">Design</i>
-            <h1 className="font-semibold text-6xl">and Build</h1>
+            <i className="text-6xl ital font-semibold ">Design</i>
+            <h1 className="font-semibold text-6xl ">and Build</h1>
            </div>
            <span>01</span>
         </div>
-      <div className="grid md:grid-cols-1 sm:grid-cols-2 space-y-5 mb-5">
-      <div className="title sm:w-[80%]">
+      <div className="flex items-center justify-around mb-5">
+      <div className="title lg:pr-8 lg:w-[40%]">
       <span className="my-5 rounded-full p-1 text-sm w-28 bg-gray-200 text-black font-semibold flex justify-center">SERVICE</span>
       <h1 className="text-3xl font-semibold">We offer comprehensive design and build solutions, providing end-to-end services for all your project needs.</h1>  
       <div className="review">

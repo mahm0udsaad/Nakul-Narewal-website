@@ -32,15 +32,10 @@ function App() {
   const listenScrollEvent = () => {
     const scrollY = window.scrollY;
     
-    if(scrollY > 5500){
-      setBg('#ffff');
-      setColor('black');
-    } else if(scrollY > 5300){
+     if(scrollY > 6000){
       setBg('#d7dedc');
       setColor('black');
-      console.log(scrollY);
-    }else if (scrollY > 4500) {
-      console.log(scrollY);
+    }else if (scrollY > 4900) {
       setBg('#072326');
       setColor('white');
     } else if (scrollY > 4000 ){
@@ -48,7 +43,7 @@ function App() {
       setColor('black')
     }else if (scrollY > 2300){
       console.log(scrollY);
-      setBg('rgb(220 220 220)')
+      setBg('rgb(218 218 218)')
       setColor('black')
     }else if (scrollY > 1900) {
       setBg('rgb(142, 142, 142)');

@@ -4,51 +4,62 @@ import { Parallax } from 'react-scroll-parallax';
 import {ParallaxVideo} from './video';
 import { Link } from 'react-router-dom';
 const TextAnimation = () => {
-  const text = "We provide seamless design-to-build service to create endearing spaces";
-  const [isVisible, setIsVisible] = useState(Array(text.length).fill(false));
+  const text = [
+    "We provide seamless",
+    "design-to-build service",
+    "to create endearing",
+    "spaces"
+  ];
 
+  const [isVisible, setIsVisible] = useState(
+    text.map(str => Array(str.length).fill(false))
+  );
   useEffect(() => {
     const delay = 50;
 
-    text.split('').forEach((_, index) => {
-      setTimeout(() => {
-        setIsVisible((prev) => {
-          const updatedVisibility = [...prev];
-          updatedVisibility[index] = true;
-          return updatedVisibility;
-        });
-      }, index * delay / 2);
+    text.forEach((string, stringIndex) => {
+      string.split('').forEach((_, charIndex) => {
+        setTimeout(() => {
+          setIsVisible(prev => {
+            const updatedVisibility = [...prev];
+            updatedVisibility[stringIndex][charIndex] = true;
+            return updatedVisibility;
+          });
+        }, charIndex * delay);
+      });
     });
   }, []);
-
   return (
    <section>
      <div className="flex flex-col overflow-hidden">
+      <div>
       <div  style={{ position: 'relative' }} className='h-[70vh] md:h-[80vh] lg:h-[100vh]'>
         <Parallax  translateY={["-50%", "70%"]} className="z-20 relative pt-5 sm:pt-5 md:pt-12 absolute leading-10 text-center text-5xl md:text-7xl lg:text-[108px] text-white font-bold mx-auto lg:w-full">
-            <div className="intro mx-auto w-11/12 z-40 text-center">
+            <div className="intro z-40 text-center">
           <AnimatePresence>
-            {isVisible.map((visible, index) => (
-              index > 19 && index < 35 ?
-                <motion.span
-                  key={index}
-                  className='underline'
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: visible ? 1 : 0 }}
-                  transition={{duration:1}}
-                >
-                  {text[index]}
-                </motion.span>
-                :
-                <motion.span
-                  key={index}
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: visible ? 1 : 0 }}
-                  transition={{duration:1}}
-                >
-                  {text[index]}
-                </motion.span>
+            <div className='mx-8'> 
+            {text.map((string, stringIndex) => (
+              <div key={stringIndex}>
+                {string.split('').map((char, charIndex) => (
+                stringIndex == 1 && charIndex < 15 ?
+                <span
+                key={charIndex}
+                className='underline'
+                style={{ opacity: isVisible[stringIndex][charIndex] ? 1 : 0 }}
+              >
+                {char}
+              </span>
+              :
+              <span
+                key={charIndex}
+                style={{ opacity: isVisible[stringIndex][charIndex] ? 1 : 0 }}
+              >
+                {char}
+              </span>
+                ))}
+              </div>
             ))}
+            </div>
           <div className="w-full flex justify-center pt-5 md:pt-8 lg:pt-12">
             <Link
               to={'/works'}
@@ -60,6 +71,7 @@ const TextAnimation = () => {
           </AnimatePresence>
             </div>
         </Parallax>
+      </div>
       </div>
       <ParallaxVideo />
     </div>
