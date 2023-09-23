@@ -2,13 +2,20 @@ import { useState ,useEffect, useRef} from 'react'
 import '../App.css'
 import {Footer} from '../components/footer'
 import TextAnimation from '../components/header'
-import { motion, useInView } from 'framer-motion'
+import { AnimatePresence, motion, useInView } from 'framer-motion'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCogs, faDraftingCompass, faClipboardList, faBuilding } from '@fortawesome/free-solid-svg-icons';
 import { Parallax , useParallax ,useParallaxController} from 'react-scroll-parallax'
 import { ContentSquare} from '../components/content';
 import transition from '../utiles/transition'
-
+const images = [
+"src/assets/photo_2023-09-23_14-15-56.jpg",
+"src/assets/photo_2023-09-23_14-16-07.jpg",
+"src/assets/photo_2023-09-23_14-16-10.jpg",
+"src/assets/photo_2023-09-23_14-16-14.jpg",
+"src/assets/photo_2023-09-23_14-16-16.jpg",
+"src/assets/photo_2023-09-23_14-16-18.jpg",
+]
 function Home({colr ,  setIsCollapOpen}) {
   const firstRef = useRef(null)
   const landRef = useRef(null)
@@ -20,6 +27,24 @@ function Home({colr ,  setIsCollapOpen}) {
   const isLandViwed = useInView(landRef)
   const isLastView = useInView(last)
   const isInView = useInView(ref)
+  const [currentImage,setCurrentImage] = useState(0)
+  const [isMouseEnter , setMouseEnter] = useState(false)
+  const [mousePos, setMousePos] = useState({});
+
+  useEffect(() => {
+    const handleMouseMove = (event) => {
+      setMousePos({ x: event.clientX, y: event.clientY });
+    };
+
+    window.addEventListener('mousemove', handleMouseMove);
+
+    return () => {
+      window.removeEventListener(
+        'mousemove',
+        handleMouseMove
+        );
+      };
+    }, []);
   const serviceIcons = [
     {
       name: 'Site Analysis & Spatial Programming',
@@ -102,16 +127,30 @@ function Home({colr ,  setIsCollapOpen}) {
            className='w-1/2 lg-p-0 md:p-0 p-2 mt-5' src='https://www.twosqft.com/wp-content/uploads/2023/02/MicrosoftTeams-image-3-1536x864.jpg' alt="about" />
         </div>
         </div>
-       <div className="sm:flex sm:w-11/12 mx-auto sm:justify-start m-5 pt-8">
+       <div onMouseMove={()=>setMouseEnter(true)} onMouseLeave={()=>setMouseEnter(false)} className="sm:flex sm:w-11/12 mx-auto sm:justify-start m-5 pt-8 relative">
+        {isMouseEnter &&
+         <motion.div 
+        initial={{x:0 , y:0 }}
+        animate={{x:mousePos.x  , y:mousePos.y -300 }}
+        className='absolute  w-[20rem] h-[30rem] overflow-hidden'>
+         <AnimatePresence mode='wait'>
+         <motion.img 
+           key={currentImage}
+           initial={{ clipPath: 'polygon(0 100%, 100% 100%, 100% 100%, 0% 100%)' }}
+           animate={{ clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0% 100%)' }}
+           transition={{duration:.5}}
+          src={images[currentImage]} alt="hoverd" className='h-full w-full' />
+         </AnimatePresence>
+        </motion.div>}
         <ul className='mx-2 clist'>
-          <li className='md:text-5xl lg:text-8xl text-3xl hover:text-gray-500'>Creative .</li>
-          <li className='md:text-5xl lg:text-8xl text-3xl hover:text-gray-500'>Functional .</li>
-          <li className='md:text-5xl lg:text-8xl text-3xl hover:text-gray-500'>Luxurious .</li>
+          <li onMouseMove={()=> setCurrentImage(1)} className='md:text-5xl lg:text-8xl text-3xl hover:text-gray-500'>Creative .</li>
+          <li onMouseMove={()=> setCurrentImage(2)} className='md:text-5xl lg:text-8xl text-3xl hover:text-gray-500'>Functional .</li>
+          <li onMouseMove={()=> setCurrentImage(5)} className='md:text-5xl lg:text-8xl text-3xl hover:text-gray-500'>Luxurious .</li>
         </ul>
         <ul className='mx-2 clist'>
-          <li className='md:text-5xl lg:text-8xl text-3xl hover:text-gray-500'>Influential .</li>
-          <li className='md:text-5xl lg:text-8xl text-3xl hover:text-gray-500'>Landmark .</li>
-          <li className='md:text-5xl lg:text-8xl text-3xl hover:text-gray-500'>Expressive .</li>
+          <li onMouseMove={()=> setCurrentImage(4)} className='md:text-5xl lg:text-8xl text-3xl hover:text-gray-500'>Influential .</li>
+          <li onMouseMove={()=> setCurrentImage(3)} className='md:text-5xl lg:text-8xl text-3xl hover:text-gray-500'>Landmark .</li>
+          <li onMouseMove={()=> setCurrentImage(0)} className='md:text-5xl lg:text-8xl text-3xl hover:text-gray-500'>Expressive .</li>
         </ul>
       </div>
       </section>
@@ -211,7 +250,7 @@ function Home({colr ,  setIsCollapOpen}) {
                 </div>            
              </div>
           </div>
-          <div className={`land-offer pt-10 w-11/12 mx-auto`}>
+          <div className={`land-offer pt-10 w-4/5 mx-auto`}>
             <div  className="sm:flex-row flex flex-col border border-black">
               <div 
                 ref={landRef}
@@ -277,19 +316,20 @@ function Home({colr ,  setIsCollapOpen}) {
           </div>
           <div 
           ref={last}
-          className= "md:h-2/5 mt-10 sm:flex border border-black w-[98%]">
-            <div className="wrapper p-5 border border-black border-t-0 border-l-0">
+          className= "lg:h-[40rem] mt-10 lg:flex justify-center border border-black w-11/12  mx-auto">
+            <div className="p-5 flex justify-center border border-black border-t-0 border-l-0">
               <motion.img 
                initial={{ clipPath: 'polygon(0 0, 100% 0, 100% 0%, 0% 0%)' }}
                animate={{ clipPath:isLastView?  'polygon(0 0, 100% 0, 100% 100%, 0% 100%)':'polygon(0 0, 100% 0, 100% 0%, 0% 0%)' }}
                transition={{duration:1 }}
+               className='h-full'
               src="https://www.twosqft.com/wp-content/uploads/2022/03/Img.jpg" alt="" />
             </div>
             <motion.div
             initial={{opacity:0}}
             animate={{opacity:isLastView ? 1 : 0}}
             transition={{duration: 1.2}}
-            className='sm:w-2/5'>
+            className='lg:w-1/2'>
               <h1 className='text-center p-5 border border-black border-t-0 border-r-0 border-l-0'>3. COMMERCIAL REAL ESTATE</h1>
               <div className="content py-20 p-8 text-center">
                 <h1 className="text-4xl ital">Ready to build wealth through</h1>
@@ -300,11 +340,12 @@ function Home({colr ,  setIsCollapOpen}) {
                 </div>
               </div>
             </motion.div>
-            <div className="wrapper p-5 border border-black border-t-0 border-r-0">
+            <div className="p-5 flex justify-center border border-black border-t-0 border-r-0">
                <motion.img 
                initial={{ clipPath: 'polygon(0 0, 100% 0, 100% 0%, 0% 0%)' }}
                animate={{ clipPath:isLastView?  'polygon(0 0, 100% 0, 100% 100%, 0% 100%)':'polygon(0 0, 100% 0, 100% 0%, 0% 0%)' }}
                transition={{duration:1 }}
+               className='h-full'
                 src="https://www.twosqft.com/wp-content/uploads/2022/03/Img-1.jpg" alt="" />
             </div>
           </div>
