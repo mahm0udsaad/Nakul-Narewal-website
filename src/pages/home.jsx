@@ -64,12 +64,12 @@ function Home({colr ,  setIsCollapOpen}) {
         </div>
         <div 
           ref={firstRef}
-        className="flex flex-col-reverse sm:flex-row mt-10 w-full justify-between">
+        className="flex flex-col-reverse sm:flex-row mt-10 w-full justify-between mx-24">
           <motion.img 
           initial={{ clipPath: 'polygon(0 0, 100% 0, 100% 0%, 0% 0%)' }}
           animate={{ clipPath:isFirstView?  'polygon(0 0, 100% 0, 100% 100%, 0% 100%)':'polygon(0 0, 100% 0, 100% 0%, 0% 0%)' }}
           transition={{duration:1 }}
-          className='sm:w-[64%] lg-p-0 md:p-0 p-2 mt-5' src="https://www.twosqft.com/wp-content/uploads/2023/02/MicrosoftTeams-image-9-1536x1229.png" alt="about" />
+          className='sm:w-[64%] lg:w-1/2 lg-p-0 md:p-0 p-2 mt-5' src="https://www.twosqft.com/wp-content/uploads/2023/02/MicrosoftTeams-image-9-1536x1229.png" alt="about" />
                  <div className="flex justify-center items-center w-full">
                 <motion.div
                   initial={{y:50 , opacity: 0}}
@@ -99,7 +99,7 @@ function Home({colr ,  setIsCollapOpen}) {
           initial={{ clipPath: 'polygon(0 0, 100% 0, 100% 0%, 0% 0%)' }}
           animate={{ clipPath:isFirstView?  'polygon(0 0, 100% 0, 100% 100%, 0% 100%)':'polygon(0 0, 100% 0, 100% 0%, 0% 0%)' }}
            transition={{duration:1}}
-           className='sm:w-3/5 lg-p-0 md:p-0 p-2 mt-5' src='https://www.twosqft.com/wp-content/uploads/2023/02/MicrosoftTeams-image-3-1536x864.jpg' alt="about" />
+           className='w-1/2 lg-p-0 md:p-0 p-2 mt-5' src='https://www.twosqft.com/wp-content/uploads/2023/02/MicrosoftTeams-image-3-1536x864.jpg' alt="about" />
         </div>
         </div>
        <div className="sm:flex sm:w-11/12 mx-auto sm:justify-start m-5 pt-8">
