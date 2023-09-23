@@ -143,15 +143,15 @@ function Home({colr ,  setIsCollapOpen}) {
           src={images[currentImage]} alt="hoverd" className='h-full w-full' />
          </AnimatePresence>
         </motion.div>}
-        <ul className='mx-2 clist '>
-          <li onMouseMove={()=> setCurrentImage(1)} className='md:text-5xl lg:text-8xl text-3xl hover:text-white hover:z-50'>Creative .</li>
-          <li onMouseMove={()=> setCurrentImage(2)} className='md:text-5xl lg:text-8xl text-3xl hover:text-white hover:z-50'>Functional .</li>
-          <li onMouseMove={()=> setCurrentImage(5)} className='md:text-5xl lg:text-8xl text-3xl hover:text-white hover:z-50'>Luxurious .</li>
+        <ul className='mx-2 clist'>
+          <li onMouseMove={()=> setCurrentImage(1)} className='md:text-5xl lg:text-8xl text-3xl hover:text-gray-700 hover:z-50'>Creative .</li>
+          <li onMouseMove={()=> setCurrentImage(2)} className='md:text-5xl lg:text-8xl text-3xl hover:text-gray-700 hover:z-50'>Functional .</li>
+          <li onMouseMove={()=> setCurrentImage(5)} className='md:text-5xl lg:text-8xl text-3xl hover:text-gray-700 hover:z-50'>Luxurious .</li>
         </ul>
         <ul className='mx-2 clist'>
-          <li onMouseMove={()=> setCurrentImage(4)} className='md:text-5xl lg:text-8xl text-3xl hover:text-white hover:z-50'>Influential .</li>
-          <li onMouseMove={()=> setCurrentImage(3)} className='md:text-5xl lg:text-8xl text-3xl hover:text-white hover:z-50'>Landmark .</li>
-          <li onMouseMove={()=> setCurrentImage(0)} className='md:text-5xl lg:text-8xl text-3xl hover:text-white hover:z-50'>Expressive .</li>
+          <li onMouseMove={()=> setCurrentImage(4)} className='md:text-5xl lg:text-8xl text-3xl hover:text-gray-700 hover:z-50'>Influential .</li>
+          <li onMouseMove={()=> setCurrentImage(3)} className='md:text-5xl lg:text-8xl text-3xl hover:text-gray-700 hover:z-50'>Landmark .</li>
+          <li onMouseMove={()=> setCurrentImage(0)} className='md:text-5xl lg:text-8xl text-3xl hover:text-gray-700 hover:z-50'>Expressive .</li>
         </ul>
       </div>
       </section>
