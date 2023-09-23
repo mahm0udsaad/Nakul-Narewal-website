@@ -51,7 +51,7 @@ function App() {
       setBg('rgb(220 220 220)')
       setColor('black')
     }else if (scrollY > 1900) {
-      setBg('rgb(220 220 220)');
+      setBg('rgb(142, 142, 142)');
       setColor('black');
     } else {
       setBg('rgb(28 28 28)');
