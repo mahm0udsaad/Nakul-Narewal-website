@@ -9,12 +9,12 @@ import { Parallax , useParallax ,useParallaxController} from 'react-scroll-paral
 import { ContentSquare} from '../components/content';
 import transition from '../utiles/transition'
 const images = [
-"src/assets/photo_2023-09-23_14-15-56.jpg",
-"src/assets/photo_2023-09-23_14-16-07.jpg",
-"src/assets/photo_2023-09-23_14-16-10.jpg",
-"src/assets/photo_2023-09-23_14-16-14.jpg",
-"src/assets/photo_2023-09-23_14-16-16.jpg",
-"src/assets/photo_2023-09-23_14-16-18.jpg",
+"../assets/photo_2023-09-23_14-15-56.jpg",
+"../assets/photo_2023-09-23_14-16-07.jpg",
+"../assets/photo_2023-09-23_14-16-10.jpg",
+"../assets/photo_2023-09-23_14-16-14.jpg",
+"../assets/photo_2023-09-23_14-16-16.jpg",
+"../assets/photo_2023-09-23_14-16-18.jpg",
 ]
 function Home({colr ,  setIsCollapOpen}) {
   const firstRef = useRef(null)
