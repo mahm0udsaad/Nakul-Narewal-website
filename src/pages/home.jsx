@@ -8,14 +8,15 @@ import { faCogs, faDraftingCompass, faClipboardList, faBuilding } from '@fortawe
 import { Parallax , useParallax ,useParallaxController} from 'react-scroll-parallax'
 import { ContentSquare} from '../components/content';
 import transition from '../utiles/transition'
-const images = [
-  "./assets/photo_2023-09-23_14-15-56.jpg",
-  "./assets/photo_2023-09-23_14-16-07.jpg",
-  "./assets/photo_2023-09-23_14-16-10.jpg",
-  "./assets/photo_2023-09-23_14-16-14.jpg",
-  "./assets/photo_2023-09-23_14-16-16.jpg",
-  "./assets/photo_2023-09-23_14-16-18.jpg",
-  ]
+import image1 from '../assets/photo_2023-09-23_14-15-56.jpg';
+import image2 from '../assets/photo_2023-09-23_14-16-07.jpg';
+import image3 from '../assets/photo_2023-09-23_14-16-10.jpg';
+import image4 from '../assets/photo_2023-09-23_14-16-14.jpg';
+import image5 from '../assets/photo_2023-09-23_14-16-16.jpg';
+import image6 from '../assets/photo_2023-09-23_14-16-18.jpg';
+
+const images = [image1, image2, image3, image4, image5, image6];
+
 function Home({colr ,  setIsCollapOpen}) {
   const firstRef = useRef(null)
   const landRef = useRef(null)
