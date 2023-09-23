@@ -143,10 +143,10 @@ function Home({colr ,  setIsCollapOpen}) {
     </div>
       </section>
       <section style={{color: `${colr}`}} className='pt-24 w-[98%] mx-auto'>
-        <div className="border py-3 border-b-0">
+        <div className="border md:w-11/12 lg:w-4/5 mx-auto py-3 border-b-0">
           <h1 className='text-center'>THROUGH A UNIQUE COMBINATION OF DESIGN AND ENGINEERING.</h1>
         </div>
-          <div className="w-full border">
+          <div className="md:w-11/12 lg:w-4/5 mx-auto border">
             <div className="corsule w-full sm:p-10">
              <div 
              ref={ref}
@@ -188,9 +188,9 @@ function Home({colr ,  setIsCollapOpen}) {
 
                   </div>
                 </div>
-                 <div className="mx-auto pt-10 sm:flex sm:w-1/2 justify-around">
+                 <div className="mx-auto pt-10 sm:flex sm:w-4/5 justify-around">
                  <div>
-                <ul className='flex flex-col space-y-2 text-lg list-disc text-gray-400'>
+                <ul className='flex flex-col space-y-2 text-sm font-semibold list-disc text-gray-400'>
                   <li>Structural Design</li>
                   <li>Architectural Design</li>
                   <li>City Planning</li>
@@ -199,7 +199,7 @@ function Home({colr ,  setIsCollapOpen}) {
                 </ul>
               </div>
               <div>
-                <ul className='flex flex-col space-y-2 text-lg list-disc text-gray-400'>
+                <ul className='flex flex-col space-y-2 text-sm font-semibold list-disc text-gray-400'>
                   <li>Landscape Architecture</li>
                   <li>Renovation</li>
                   <li>Site Planning</li>
