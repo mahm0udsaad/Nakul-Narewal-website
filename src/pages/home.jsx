@@ -85,18 +85,18 @@ function Home({colr ,  setIsCollapOpen}) {
             <h2 className="text-4xl font-semibold">beyond square footage</h2>
           </div>
           <div className="lab pt-5 sm:w-1/2 flex items-center">
-            <p>With a focus on collaboration, attention to detail, and unwavering commitment to quality, we are dedicated to creating beautiful, functional, and enduring spaces.</p>
+            <p>With a focus on collaboration, attention to detail, and unwavering commitment to quality,<br /> we are dedicated to creating beautiful, functional, and enduring spaces.</p>
           </div>
         </div>
         <div 
           ref={firstRef}
-        className="flex flex-col-reverse sm:flex-row mt-10 w-full justify-between mx-24">
+        className="flex flex-col-reverse sm:flex-row mt-10 w-full justify-between">
           <motion.img 
           initial={{ clipPath: 'polygon(0 0, 100% 0, 100% 0%, 0% 0%)' }}
           animate={{ clipPath:isFirstView?  'polygon(0 0, 100% 0, 100% 100%, 0% 100%)':'polygon(0 0, 100% 0, 100% 0%, 0% 0%)' }}
           transition={{duration:1 }}
           className='sm:w-[64%] lg:w-1/2 lg-p-0 md:p-0 p-2 mt-5' src="https://www.twosqft.com/wp-content/uploads/2023/02/MicrosoftTeams-image-9-1536x1229.png" alt="about" />
-                 <div className="flex justify-center items-center w-full">
+                 <div className="flex justify-center items-center w-11/12 mx-auto">
                 <motion.div
                   initial={{y:50 , opacity: 0}}
                   animate={{y:isSecondView?0 : 50 , opacity:isSecondView? 1:0}}
@@ -108,25 +108,25 @@ function Home({colr ,  setIsCollapOpen}) {
                   <p className="underline transtion duration-300 hover:text-orange-200">Learn more</p>
                 </motion.div>
                </div>
-        </div>
-        <div className="sm:flex mt-10 w-full justify-between">
-           <div className="flex justify-center items-center w-full">
-           <motion.div
-            initial={{y:50 , opacity: 0}}
-            animate={{y:isFirstView?0 : 50 , opacity:isFirstView? 1:0}}
-            transition={{duration:1.2}}
-            className="flex flex-col text-center items-center justify-center">
-            <p className='pb-4'>OUR PROJECTS</p>
-            <i className='text-4xl ital'>Commercial</i>
-            <p className="underline transtion duration-300 hover:text-orange-200">Learn more</p>
-           </motion.div>
-           </div>
-           <motion.img 
-          initial={{ clipPath: 'polygon(0 0, 100% 0, 100% 0%, 0% 0%)' }}
-          animate={{ clipPath:isFirstView?  'polygon(0 0, 100% 0, 100% 100%, 0% 100%)':'polygon(0 0, 100% 0, 100% 0%, 0% 0%)' }}
-           transition={{duration:1}}
-           className='w-1/2 lg-p-0 md:p-0 p-2 mt-5' src='https://www.twosqft.com/wp-content/uploads/2023/02/MicrosoftTeams-image-3-1536x864.jpg' alt="about" />
-        </div>
+              </div>
+              <div className="sm:flex mt-10 w-full justify-between">
+                <div className="flex justify-center items-center w-full">
+                <motion.div
+                  initial={{y:50 , opacity: 0}}
+                  animate={{y:isFirstView?0 : 50 , opacity:isFirstView? 1:0}}
+                  transition={{duration:1.2}}
+                  className="flex flex-col text-center items-center justify-center">
+                  <p className='pb-4'>OUR PROJECTS</p>
+                  <i className='text-4xl ital'>Commercial</i>
+                  <p className="underline transtion duration-300 hover:text-orange-200">Learn more</p>
+                </motion.div>
+                </div>
+                <motion.img 
+                initial={{ clipPath: 'polygon(0 0, 100% 0, 100% 0%, 0% 0%)' }}
+                animate={{ clipPath:isFirstView?  'polygon(0 0, 100% 0, 100% 100%, 0% 100%)':'polygon(0 0, 100% 0, 100% 0%, 0% 0%)' }}
+                transition={{duration:1}}
+                className='w-1/2 lg-p-0 md:p-0 p-2 mt-5' src='https://www.twosqft.com/wp-content/uploads/2023/02/MicrosoftTeams-image-3-1536x864.jpg' alt="about" />
+              </div>
         </div>
        <div onMouseMove={()=>setMouseEnter(true)} onMouseLeave={()=>setMouseEnter(false)} className="sm:flex sm:w-11/12 mx-auto sm:justify-start m-5 pt-8 relative">
         {isMouseEnter &&
