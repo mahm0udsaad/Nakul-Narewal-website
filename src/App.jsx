@@ -48,10 +48,10 @@ function App() {
       setColor('black')
     }else if (scrollY > 2300){
       console.log(scrollY);
-      setBg('#cccccc')
+      setBg('white')
       setColor('black')
     }else if (scrollY > 1900) {
-      setBg('#8e8e8e');
+      setBg('rgb(220 220 220);');
       setColor('black');
     } else {
       setBg('rgb(28 28 28)');
