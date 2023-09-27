@@ -48,10 +48,10 @@ const imageUrls = [
   ];
   const Card = ({ data }) => {
     return (
-      <div className="p-4 w-[30%] lg:w-[35%]">
+      <div className="p-4 md:w-[30%] sm:w-[35%]">
         <img src={data.imageUrl} alt="Project" className="w-full" />
         <div className="text-center mt-4">
-          <p className="text-7xl my-10 font-bold">{data.percentage}</p>
+          <p className="lg:text-7xl text-4xl my-10 font-bold">{data.percentage}</p>
           <p className="text-gray-600 text-start">{data.description}</p>
         </div>
       </div>
@@ -80,8 +80,8 @@ return (
         <div className="title w-11/12 mx-auto mb-10 ">
             <span className="rounded-full p-1 text-sm px-3 bg-black text-white font-semibold">ABOUT US</span>
             <br />
-            <i className="text-4xl font-semibold ital ">Design, Construct, Transcend</i>
-            <h1 className="text-4xl bold">beyond square footage</h1>
+            <i className="text-5xl font-semibold ital ">Design, Construct, Transcend</i>
+            <h1 className="text-5xl bold">beyond square footage</h1>
         </div>
         <FullScreenVideo />
         <div className="w-11/12 lg:w-[85%] mx-auto">
@@ -104,7 +104,7 @@ return (
                 <li>★</li>
              </ul>
              </div>
-             <div className="flex justify-around w-full lg:w-[60%]">
+             <div className="sm:flex justify-around w-full lg:w-[60%]">
              <div className="midd text-xl md:w-1/2 my-5 sm:text-xl font-semibold">
                 <ul className='leading-9 lg:pl-8'>
                     <li>Architectural Design</li>
@@ -158,7 +158,7 @@ return (
           </div>
         </div>
         <div className="w-full lg:w-5/6 mx-auto hidden sm:flex justify-between py-24 overflow-hidden">
-            <div className="w-[60%] lg:w-[40%] relative">
+            <div className="w-[60%] lg:w-[55%] relative">
                 <Parallax
                 translateY={['-20%', '20%']}
                 speed={-5}
@@ -168,7 +168,7 @@ return (
                 </Parallax>
                 <Parallax
                 translateY={['-30%', '50%']}
-                className='absolute w-56 h-80 right-5'
+                className='absolute w-56 h-80 right-0'
                 >
                     <img className='h-full' src="https://www.twosqft.com/wp-content/uploads/2023/06/ab3.jpg" alt="" />
                 </Parallax>

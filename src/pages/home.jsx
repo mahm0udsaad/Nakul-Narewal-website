@@ -125,7 +125,7 @@ function Home({colr ,  setIsCollapOpen}) {
                 initial={{ clipPath: 'polygon(0 0, 100% 0, 100% 0%, 0% 0%)' }}
                 animate={{ clipPath:isFirstView?  'polygon(0 0, 100% 0, 100% 100%, 0% 100%)':'polygon(0 0, 100% 0, 100% 0%, 0% 0%)' }}
                 transition={{duration:1}}
-                className='w-1/2 lg-p-0 md:p-0 p-2 mt-5' src='https://www.twosqft.com/wp-content/uploads/2023/02/MicrosoftTeams-image-3-1536x864.jpg' alt="about" />
+                className='sm:w-1/2 lg-p-0 md:p-0 p-2 mt-5' src='https://www.twosqft.com/wp-content/uploads/2023/02/MicrosoftTeams-image-3-1536x864.jpg' alt="about" />
               </div>
         </div>
        <div onMouseMove={()=>setMouseEnter(true)} onMouseLeave={()=>setMouseEnter(false)} className="sm:flex sm:w-11/12 mx-auto sm:justify-start m-5 pt-8 relative">
@@ -144,20 +144,20 @@ function Home({colr ,  setIsCollapOpen}) {
          </AnimatePresence>
         </motion.div>}
         <ul className='mx-2 clist'>
-          <li onMouseMove={()=> setCurrentImage(1)} className='md:text-5xl lg:text-8xl text-3xl hover:text-white hover:z-50'>Creative .</li>
-          <li onMouseMove={()=> setCurrentImage(2)} className='md:text-5xl lg:text-8xl text-3xl hover:text-white hover:z-50'>Functional .</li>
-          <li onMouseMove={()=> setCurrentImage(5)} className='md:text-5xl lg:text-8xl text-3xl hover:text-white hover:z-50'>Luxurious .</li>
+          <li onMouseMove={()=> setCurrentImage(1)} className='text-5xl lg:text-8xl hover:text-white hover:z-50'>Creative .</li>
+          <li onMouseMove={()=> setCurrentImage(2)} className='text-5xl lg:text-8xl hover:text-white hover:z-50'>Functional .</li>
+          <li onMouseMove={()=> setCurrentImage(5)} className='text-5xl lg:text-8xl hover:text-white hover:z-50'>Luxurious .</li>
         </ul>
         <ul className='mx-2 clist'>
-          <li onMouseMove={()=> setCurrentImage(4)} className='md:text-5xl lg:text-8xl text-3xl hover:text-white hover:z-50'>Influential .</li>
-          <li onMouseMove={()=> setCurrentImage(3)} className='md:text-5xl lg:text-8xl text-3xl hover:text-white hover:z-50'>Landmark .</li>
-          <li onMouseMove={()=> setCurrentImage(0)} className='md:text-5xl lg:text-8xl text-3xl hover:text-white hover:z-50'>Expressive .</li>
+          <li onMouseMove={()=> setCurrentImage(4)} className='text-5xl lg:text-8xl hover:text-white hover:z-50'>Influential .</li>
+          <li onMouseMove={()=> setCurrentImage(3)} className='text-5xl lg:text-8xl hover:text-white hover:z-50'>Landmark .</li>
+          <li onMouseMove={()=> setCurrentImage(0)} className='text-5xl lg:text-8xl hover:text-white hover:z-50'>Expressive .</li>
         </ul>
       </div>
       </section>
       <section className='w-11/12 mx-auto'>
-      <div className="pt-20 text-black p-8 w-full sm:flex space-x-5 space-y-5  justify-between">
-        <div className="md:w-1/2 space-y-5 justify-around flex flex-col">
+      <div className="pt-20 text-black sm:p-8 w-full sm:flex space-x-5 space-y-5  justify-between">
+        <div className="md:w-1/2 space-y-5 sm:justify-around flex flex-col">
           <p>MEET TWOSWFT</p>
           <h1 className='text-5xl font-semibold'><i className="ital">Creative</i> <br /> and proficient.</h1>
         </div>
@@ -214,7 +214,7 @@ function Home({colr ,  setIsCollapOpen}) {
              <img src="https://www.twosqft.com/wp-content/uploads/2023/06/r1-1.png" alt="" />
              </motion.div>
              </div>
-              <div className="sm:flex md:flex-col lg:flex-row pt-12 px-5">
+              <div className="sm:flex md:flex-col lg:flex-row pt-12 sm:px-5">
                 <div className="text-white flex flex-col  space-y-5 md:w-full text-start sm:w-1/2">
                 <p className="text-4xl ital">
                     Functional
@@ -228,9 +228,9 @@ function Home({colr ,  setIsCollapOpen}) {
 
                   </div>
                 </div>
-                 <div className="mx-auto pt-10 sm:flex sm:w-4/5 justify-around">
+                 <div className="sm:mx-auto mx-8 pt-10 sm:flex sm:w-4/5 justify-around">
                  <div>
-                <ul className='flex flex-col space-y-2 text-sm font-semibold list-disc text-gray-400'>
+                <ul className='flex flex-col space-y-2 sm:py-0 py-4 text-sm font-semibold list-disc text-gray-400'>
                   <li>Structural Design</li>
                   <li>Architectural Design</li>
                   <li>City Planning</li>
@@ -284,7 +284,7 @@ function Home({colr ,  setIsCollapOpen}) {
             </div>
           </div>
           <div  className="sm:flex justify-between pt-20">
-            <h1 className='text-5xl pt-5 pr-4 sm:mb-0 mb-10 text-ce lg:bg-inherit md:bg-inherit bg-white relative z-20'>Process</h1>
+            <h1 className='text-5xl sm:pt-5 sm:pb-0 pb-4 pr-4 sm:mb-0 mb-10 text-ce lg:bg-inherit bg-inherit  relative z-20'>Process</h1>
             <div  className="grid grid-cols-1 lg:grid-cols-4 gap-2 w-5/6 ">
             <ContentSquare
                 border='border'

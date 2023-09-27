@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { ProjectCard } from "../components/typography";
 import { Link } from "react-router-dom";
-import { PageFooter } from "../components/footer";
+import { Footer, PageFooter } from "../components/footer";
 import transition from "../utiles/transition";
 
 const Works =()=>{
@@ -69,14 +69,22 @@ const Works =()=>{
       ];
     return (
       <>
-        <section className="pt-36 overflow-hidden">
-            <div className="flex flex-col justify-between h-[40vh] title w-11/12 mx-auto mb-10 border-b-[1px] border-black">
+        <section className="pt-36 overflow-hidden w-11/12 xl:w-5/6 mx-auto ">
+            <div className="flex flex-col justify-between h-[40vh] title mb-10">
            <div className="top">
            <span className="rounded-full p-1 text-sm px-3 bg-black text-white font-semibold">OUR VISION</span>
             <br />
             <i className="text-6xl sm:text-8xl font-semibold">Recent</i>
             <h1 className="font-semibold text-6xl sm:text-8xl">Works</h1>
            </div>
+        </div>
+        <div className="flex w-full justify-between items-center text-gray-600">
+          <div className="flex w-[30%] justify-around">
+            <span>Filter by</span><span>All</span>Commercial<span>Residential</span>
+          </div>
+          <div>
+            see more 
+          </div>
         </div>
         <div className="grid sm:grid-cols-3">
         {projects.map((project, index) => (
@@ -85,8 +93,10 @@ const Works =()=>{
             </Link>
         ))}
         </div>
+        <div className="flex justify-center"><button className="p-5 text-sm border">Load More</button></div>
+
         </section>
-        <PageFooter />
+        <Footer />
       </>
     )
     }

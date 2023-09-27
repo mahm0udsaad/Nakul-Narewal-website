@@ -93,17 +93,17 @@ const PageFooter = () =>{
       });
     return(
        <>
-       <div className="overflow-hidden">
+       <div className="overflow-hidden App">
         <Parallax 
         translateY={['0','70%']}
         speed={2}
         className=' sm:relative w-full sm:flex justify-end'
         >
-        <img ref={mage.ref} className='opacity-50 -top-12 right-5 opacity-1 w-[40rem] h-[30rem]' src="https://www.twosqft.com/wp-content/uploads/2022/04/img-1@2x-11.jpg" alt="" />
+        <img ref={mage.ref} className='opacity-50 -top-12 right-5 opacity-1 sm:w-[40rem] h-[30rem]' src="https://www.twosqft.com/wp-content/uploads/2022/04/img-1@2x-11.jpg" alt="" />
         </Parallax>
-        <div style={{background:'black'}} className="w-[80%] h-full relative text-white  sm:p-20 App z-20">
-           <div className="flex p-8">
-            <div className="w-1/2">
+        <div style={{background:'black'}} className="sm:w-[80%] h-full relative text-white  sm:p-20 App z-20">
+           <div className="sm:flex sm:p-8 p-3">
+            <div className="sm:w-1/2">
                <div className="title">
                <h1 className="md:text-5xl sm:text-6xl">Join us in building greatness together, leveraging our combined vision and expertise.</h1>
                <div className="flex flex-col">
@@ -132,7 +132,7 @@ const PageFooter = () =>{
                </div>
                </div>
             </div>
-             <div className="hidden sm:flex flex-col items-center justify-center w-1/2">
+             <div className="hidden sm:flex flex-col items-center justify-center sm:w-1/2">
              <p className='w-11/12 mx-auto text-sm text-[#ffffff7a]'>
                Leverage our extraordinary design and engineering team, combining unrivaled creativity with technical brilliance, to deliver awe-inspiring solutions that push boundaries and exceed expectations.
 

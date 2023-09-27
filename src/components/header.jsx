@@ -33,11 +33,11 @@ const TextAnimation = () => {
    <section>
      <div className="flex flex-col overflow-hidden">
       <div>
-      <div  style={{ position: 'relative' }} className='h-[70vh] md:h-[80vh] lg:h-[100vh]'>
-        <Parallax  translateY={["-50%", "70%"]} className="z-20 relative pt-5 sm:pt-5 md:pt-12 absolute leading-10 text-center text-5xl md:text-7xl lg:text-[108px] text-white font-bold mx-auto lg:w-full">
+      <div  style={{ position: 'relative' }} className='h-[70vh] md:h-[80vh] lg:h-[100vh] xl:h-[70vh]'>
+        <Parallax  translateY={["-50%", "70%"]} className="z-20 relative pt-20 sm:pt-5 sm:pt-5 md:pt-12 absolute leading-10 text-center text-4xl lg:text-[87px] xl:text-[108px] text-white font-bold mx-auto lg:w-full">
             <div className="intro z-40 text-center">
           <AnimatePresence>
-            <div className='mx-8'> 
+            <div className='sm:mx-8'> 
             {text.map((string, stringIndex) => (
               <div key={stringIndex}>
                 {string.split('').map((char, charIndex) => (
@@ -75,14 +75,14 @@ const TextAnimation = () => {
       </div>
       <ParallaxVideo />
     </div>
-      <div className="text-white pl-16 p-8 w-full flex items-center flex-col-reverse md:space-y-5 lg:flex-row justify-between">
+      <div className="text-white sm:pl-16 sm:p-8 p-4 w-full flex items-center flex-col md:space-y-5 lg:flex-row justify-between">
         <div className=" justify-around  lg:w-[42%]">
           <h2 className="font-bold pb-8">ABOUT US</h2>
           <i className='text-4xl ital'>Two Square Feet,</i>
           <h1 className='text-4xl font-semibold '>
           ensures that every aspect of your project is carefully designed and executed.
           </h1>
-          <p className="mb-4 text-[#ffffffa6] pt-8 w-11/12">
+          <p className="mb-4 text-[#ffffffa6] pt-8 sm:w-11/12">
          Two Square Feet is a full-service construction firm with a team of architects, engineers, interior designers, and turnkey specialists to bring your vision to life. We operate at the intersection of leading-edge technology and state-of-the-art designs to give you a seamless experience. With a focus on collaboration, attention to detail, and unwavering commitment to quality, we are dedicated to creating beautiful, functional, and endearing spaces.
           </p>
         </div>

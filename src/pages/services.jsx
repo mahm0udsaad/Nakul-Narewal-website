@@ -92,18 +92,18 @@ function services() {
   return (
    <>
       <div>
-      <section className='services space-y-5 pt-28 lg:pt-28 w-11/12 lg:w-5/6 mx-auto'>
+      <section className='services space-y-5 pt-36 xl:w-5/6 w-11/12 mx-auto'>
       <div className="flex flex-col justify-between h-[40vh] title mb-10 border-b-[1px] border-black">
            <div className="top">
            <span className="rounded-full p-1 text-sm px-3 bg-black text-white font-semibold">OUR SERVICES</span>
             <br />
-            <i className="text-6xl ital font-semibold ">Design</i>
-            <h1 className="font-semibold text-6xl ">and Build</h1>
+            <i className="text-5xl sm:text-8xl ital font-semibold pt-4">Design</i>
+            <h1 className="font-semibold text-8xl ">and Build</h1>
            </div>
            <span>01</span>
         </div>
-      <div className="flex items-center justify-around mb-5">
-      <div className="title lg:pr-8 lg:w-[40%]">
+      <div className="lg:flex items-center justify-around mb-5">
+      <div className="title lg:pr-8 lg:w-[60%]">
       <span className="my-5 rounded-full p-1 text-sm w-28 bg-gray-200 text-black font-semibold flex justify-center">SERVICE</span>
       <h1 className="text-3xl font-semibold">We offer comprehensive design and build solutions, providing end-to-end services for all your project needs.</h1>  
       <div className="review">
@@ -119,7 +119,7 @@ function services() {
       </div>
       </div>
       <div className="sm:flex w-full">
-      <ul className='text-3xl md:pt-5 space-y-2 sm:space-y-5'>
+      <ul className='text-xl md:pt-5 lg-pt-0 pt-4 space-y-2 sm:space-y-5'>
                 <li>Projects</li>
                 <li>Sustainability</li>
                 <li>People and More</li>
@@ -127,19 +127,19 @@ function services() {
                 <li>The Building Process</li>
                 <li>Research-Development</li>
               </ul>
-      <div className="parag pt-5 sm:w-1/2 mx-auto text-xl leading-9">
+      <div className="parag pt-5 sm:w-1/2 mx-auto text-md leading-9">
       We provide clients with comprehensive design and build solutions, ensuring seamless processes from concept to execution. Our experienced team delivers exceptional results, upholding the highest standards of quality and craftsmanship. With end-to-end services, we guarantee client satisfaction in designing spaces and constructing structures. Trust our professionalism and expertise for your project needs.
       </div>
       </div>
       </div>
       </section>
-      <section>
+      <section className='px-4 w-11/12 xl:w-5/6 mx-auto'>
       {introData.map((data , i)=>(
          <IntroWithAccordion key={i}  {...data}/>
       ))}
       </section>
-      <section className='w-11/12 mx-auto'>
-        <div className="sm:w-11/12 mx-auto text-center">
+      <section className='w-11/12 xl:w-5/6 mx-auto'>
+        <div className="sm:w-11/12 xl:w-5/6 mx-auto text-center">
         <motion.h2 className="text-3xl  text-black font-semibold">
         Have a project in mind?<br />
         Do not hesitate to say <br />
@@ -153,13 +153,23 @@ function services() {
         </motion.span>
       </motion.h2>  
       <button className="p-5 text-sm border">LET'S BUILD</button>
-       <div className="contact w-1/2 text-center mx-auto">
-        <p className="text-sm">Looking for collaboration?</p>
-        <h1 className="border-b-2 border-black font-semibold text-xl py-5">CONTACT US</h1>
-        <p className='text-gray-500 py-2'>I’m interested in working together</p>
-        <p className='text-gray-500 py-3 border-b-2 border-black'>(+91)8294373340</p>
-        <p className='text-gray-500 py-3'>Have a project in mind? Send a message.</p>
+       <div className="contact text-center mx-auto">
+        <div className="sm:flex items-center justify-between pt-8">
+        <div>
+        <p className="text-gray-500">Looking for collaboration</p>
+        <h1>Contact us</h1>
+        </div>
+        <div className='border-black border w-1/2 sm:mt-0 mt-3 sm:w-[10%] flex mx-auto sm:mx-0'></div>
+        <div>
+        <p className='text-gray-500 py-2'>I’m interested in<br /> working together</p>
+        <p className='text-gray-500 py-3 border-black'>(+91)8294373340</p>
+        </div>
+        <div className='border-black border w-1/2 sm:mt-0 mt-3 sm:w-[10%] flex mx-auto sm:mx-0'></div>
+        <div>
+        <p className='text-gray-500 py-3'>Have a project in mind?<br /> Send a message.</p>
         <p className='text-gray-500'>hello@twosqft.com</p>
+        </div>
+        </div>
        </div>
         </div>
       </section>

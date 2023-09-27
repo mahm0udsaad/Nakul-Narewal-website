@@ -4,16 +4,16 @@ import transition from "../utiles/transition";
 const Contact =()=>{
     return (
         <>
-        <section className='overflow-x-hidden services space-y-5 pt-48 lg:pt-32 w-full mx-3'>
-        <div className="flex flex-col justify-center h-[40vh] title mx-auto w-11/12">
+        <section className='overflow-x-hidden services space-y-5 pt-20 w-11/12 xl:w-5/6 mx-auto'>
+        <div className="flex flex-col justify-center py-16 title mx-auto w-11/12">
              <div className="top text-5xl md:text-6xl lg:text-9xl">
              <span className="rounded-full p-1 text-sm px-3 bg-black text-white font-semibold">CONTACT</span>
               <br />
-              <i className=" font-semibold">Have a Project</i>
+              <i className=" font-semibold ital">Have a Project</i>
               <h1 className="font-semibold">in mind?</h1>
              </div>
           </div>
-          <div className="sm:flex pt-20 px-5">
+          <div className="sm:flex  px-5">
             <div className="r flex flex-col space-y-3">
                 <p className="w-11/12">We offer comprehensive design and build solutions,<br /> providing end-to-end services for all your project needs.</p>
                 <p>we'r interested in</p>
@@ -27,12 +27,12 @@ const Contact =()=>{
                 <h1 className="font-bold text-xl">hello@twosqft.com</h1>
             </div>
           </div>
-          <div className="w-[99%] mx-auto h-[70vh] overflow-x-hidden">
+          <div className="sm:w-[99%] w-11/12 mx-auto h-[60vh] overflow-x-hidden">
           <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d460503.85532457475!2d85.143084!3d25.615336!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ed596bfcf2e633%3A0x2ec2582944990235!2sTwosqft!5e0!3m2!1sen!2sus!4v1693935239174!5m2!1sen!2sus" 
           style={{border:"0"}}
            allowFullScreen
             loading="lazy"
-            className="w-full h-full px-5"
+            className="w-full h-full sm:px-5"
              ></iframe>  
              </div>
           </section>

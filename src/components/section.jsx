@@ -7,7 +7,7 @@ function IntroWithAccordion({ title, imageSrc, services ,left}) {
     <div className={`${left ? ' lg:flex-row-reverse md:flex-row-reverse':''} sm:my-10 intro py-10 sm:flex justify-between overflow-hidden `}>
      <Parallax translateY={[-20, 10]} className="transtion duration-300 img-wrapper sm:w-1/2 flex flex-col justify-center items-center">
      <div className="wrapper overflow-hidden">
-     <img className='sm:w-11/12' src={imageSrc} alt="" />
+     <img className='sm:w-11/12 xl:w-5/6' src={imageSrc} alt="" />
      </div>
      </Parallax>
        <div className="sm:w-2/5 px-">
