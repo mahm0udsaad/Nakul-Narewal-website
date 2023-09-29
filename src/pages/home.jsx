@@ -215,11 +215,11 @@ function Home({colr ,  setIsCollapOpen}) {
              </motion.div>
              </div>
               <div className="sm:flex md:flex-col lg:flex-row pt-12 sm:px-5">
-                <div className="text-white flex flex-col  space-y-5 md:w-full text-start sm:w-1/2">
+                <div className="text-white flex flex-col sm:items-start items-center  space-y-5 md:w-full text-start sm:w-1/2">
                 <p className="text-4xl ital">
                     Functional
                   </p>
-                  <h1 className="text-5xl ">
+                  <h1 className="text-3xl sm:text-5xl">
                   & User-Friendly <br /> Design.
                   </h1>
                   <p className='w-3/5'>Experience the perfect fusion of style and usability with our design approach, creating spaces that are both functional and user-friendly.</p>
@@ -283,8 +283,8 @@ function Home({colr ,  setIsCollapOpen}) {
               </div>
             </div>
           </div>
-          <div  className="sm:flex justify-between pt-20">
-            <h1 className='text-5xl sm:pt-5 sm:pb-0 pb-4 pr-4 sm:mb-0 mb-10 text-ce lg:bg-inherit bg-inherit  relative z-20'>Process</h1>
+          <div  className="flex sm:flex-row flex-col sm:items-start items-center justify-between pt-20">
+            <h1 className='text-5xl sm:pt-5 sm:pb-0 pb-4 pr-4 sm:mb-0 mb-10 text-center sm:text-start lg:bg-inherit bg-inherit  relative z-20'>Process</h1>
             <div  className="grid grid-cols-1 lg:grid-cols-4 gap-2 w-5/6 ">
             <ContentSquare
                 border='border'
